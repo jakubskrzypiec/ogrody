@@ -1,9 +1,16 @@
-// Endpoint formularza Formspree. Podmień również action w index.html.
+
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/TWOJ_ENDPOINT'; // <-- podmień na własny endpoint
 
 const header = document.querySelector('[data-header]');
 const menu = document.querySelector('[data-menu]');
 const menuToggle = document.querySelector('[data-menu-toggle]');
+const body = document.body;
+
+function syncScrollLock() {
+  if (!body) return;
+  const shouldLock = body.classList.contains('menu-open') || body.classList.contains('lightbox-open');
+  body.style.overflow = shouldLock ? 'hidden' : '';
+}
 
 function setHeaderState() {
   if (!header) return;
@@ -18,7 +25,8 @@ if (menuToggle && menu) {
     menuToggle.setAttribute('aria-expanded', String(!open));
     menu.classList.toggle('is-open', !open);
     header?.classList.toggle('menu-open', !open);
-    document.body.style.overflow = !open ? 'hidden' : '';
+    body.classList.toggle('menu-open', !open);
+    syncScrollLock();
   });
 
   menu.querySelectorAll('a').forEach(link => {
@@ -26,7 +34,8 @@ if (menuToggle && menu) {
       menu.classList.remove('is-open');
       header?.classList.remove('menu-open');
       menuToggle.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
+      body.classList.remove('menu-open');
+      syncScrollLock();
     });
   });
 }
@@ -58,14 +67,16 @@ function openLightbox(index) {
   lastFocusedElement = document.activeElement;
   renderLightbox(index);
   lightbox.hidden = false;
-  document.body.classList.add('lightbox-open');
+  body.classList.add('lightbox-open');
+  syncScrollLock();
   btnClose?.focus();
 }
 
 function closeLightbox() {
   if (!lightbox) return;
   lightbox.hidden = true;
-  document.body.classList.remove('lightbox-open');
+  body.classList.remove('lightbox-open');
+  syncScrollLock();
   if (lightboxImage) lightboxImage.src = '';
   lastFocusedElement?.focus();
 }
@@ -91,7 +102,7 @@ document.addEventListener('keydown', event => {
   }
 });
 
-// Jeżeli endpoint jest jeszcze placeholderem, formularz nie wysyła danych i podpowiada co uzupełnić.
+// Formularz.
 const contactForm = document.querySelector('[data-contact-form]');
 const formNote = document.querySelector('[data-form-note]');
 if (contactForm) {
