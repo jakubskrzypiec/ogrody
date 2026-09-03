@@ -147,3 +147,25 @@ details.forEach(item => item.addEventListener('toggle', () => {
 }));
 
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// Highlight the menu item for the section currently in view.
+const sectionLinks = [...document.querySelectorAll('.main-nav a[href^="#"]')]
+  .map(link => ({ link, section: document.querySelector(link.getAttribute('href')) }))
+  .filter(item => item.section);
+
+const activeSectionObserver = new IntersectionObserver((entries) => {
+  const visible = entries
+    .filter(entry => entry.isIntersecting)
+    .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+  if (!visible) return;
+  sectionLinks.forEach(({ link, section }) => {
+    link.classList.toggle('is-active', section === visible.target);
+  });
+}, {
+  root: null,
+  rootMargin: '-28% 0px -58% 0px',
+  threshold: [0, 0.15, 0.35, 0.6]
+});
+
+sectionLinks.forEach(({ section }) => activeSectionObserver.observe(section));
