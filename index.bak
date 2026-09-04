@@ -103,34 +103,25 @@
       </div>
 
       <div class="project-grid" data-project-covers>
-        <button class="project-card reveal" type="button" data-gallery="1" aria-label="Otwórz galerię realizacji 01">
-          <div class="project-card-media">
-            <img src="realizacja-1-01.webp" alt="Projekt ogrodu — realizacja 01" loading="lazy" data-cover-image>
-            <span class="project-tag">8 ujęć</span>
-          </div>
-          <span class="project-card-body">
-            <span class="project-meta"><small>Otwórz galerię</small><b>Realizacja 01</b></span>
-          </span>
+        <button class="project-card project-card-large reveal" type="button" data-gallery="1" aria-label="Otwórz galerię realizacji 01">
+          <img src="realizacja-1-01.webp" alt="Projekt ogrodu — realizacja 01" loading="lazy" data-cover-image>
+          <span class="project-tag">8 ujęć</span>
+          <span class="project-overlay"></span>
+          <span class="project-meta"><small>Otwórz galerię</small><b>Realizacja 01</b></span>
         </button>
 
         <button class="project-card reveal delay-1" type="button" data-gallery="2" aria-label="Otwórz galerię realizacji 02">
-          <div class="project-card-media">
-            <img src="realizacja-2-01.webp" alt="Projekt ogrodu — realizacja 02" loading="lazy" data-cover-image>
-            <span class="project-tag">9 ujęć</span>
-          </div>
-          <span class="project-card-body">
-            <span class="project-meta"><small>Otwórz galerię</small><b>Realizacja 02</b></span>
-          </span>
+          <img src="realizacja-2-01.webp" alt="Projekt ogrodu — realizacja 02" loading="lazy" data-cover-image>
+          <span class="project-tag">9 ujęć</span>
+          <span class="project-overlay"></span>
+          <span class="project-meta"><small>Otwórz galerię</small><b>Realizacja 02</b></span>
         </button>
 
         <button class="project-card reveal delay-2" type="button" data-gallery="3" aria-label="Otwórz galerię realizacji 03">
-          <div class="project-card-media">
-            <img src="realizacja-3-01.webp" alt="Projekt ogrodu — realizacja 03" loading="lazy" data-cover-image>
-            <span class="project-tag">8 ujęć</span>
-          </div>
-          <span class="project-card-body">
-            <span class="project-meta"><small>Otwórz galerię</small><b>Realizacja 03</b></span>
-          </span>
+          <img src="realizacja-3-01.webp" alt="Projekt ogrodu — realizacja 03" loading="lazy" data-cover-image>
+          <span class="project-tag">8 ujęć</span>
+          <span class="project-overlay"></span>
+          <span class="project-meta"><small>Otwórz galerię</small><b>Realizacja 03</b></span>
         </button>
       </div>
       <div class="project-hint">Kliknij wybraną realizację, żeby otworzyć pełną galerię.</div>
