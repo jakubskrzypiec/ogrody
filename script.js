@@ -57,11 +57,10 @@ if (!reducedMotion && window.innerWidth > 760) {
   }, { passive: true });
 }
 
-const realGallery = ['realizacja-real-01.webp', 'realizacja-real-02.webp', 'realizacja-real-03.webp', 'realizacja-real-04.webp', 'realizacja-real-05.webp'];
 const galleries = {
-  1: realGallery,
-  2: realGallery,
-  3: realGallery,
+  1: ['realizacja-1-01.webp', 'realizacja-1-02.webp', 'realizacja-1-03.webp', 'realizacja-1-04.webp', 'realizacja-1-05.webp', 'realizacja-1-06.webp', 'realizacja-1-07.webp', 'realizacja-1-08.webp'],
+  2: ['realizacja-2-01.webp', 'realizacja-2-02.webp', 'realizacja-2-03.webp', 'realizacja-2-04.webp', 'realizacja-2-05.webp', 'realizacja-2-06.webp', 'realizacja-2-07.webp', 'realizacja-2-08.webp', 'realizacja-2-09.webp'],
+  3: ['realizacja-3-01.webp', 'realizacja-3-02.webp', 'realizacja-3-03.webp', 'realizacja-3-04.webp', 'realizacja-3-05.webp', 'realizacja-3-06.webp', 'realizacja-3-07.webp', 'realizacja-3-08.webp'],
 };
 
 const modal = document.getElementById('galleryModal');
