@@ -946,18 +946,23 @@ p, a, strong, span { overflow-wrap: break-word; }
 }
 .main-nav a:not(.nav-cta):hover::after,
 .main-nav a.is-active:not(.nav-cta)::after { transform: scaleX(1); transform-origin: left center; }
-.nav-cta { overflow: hidden; isolation: isolate; }
+.nav-cta { overflow: hidden; isolation: isolate; position: relative; }
+.nav-cta > span { position: relative; z-index: 1; color: currentColor; }
 .nav-cta::before {
   content: "";
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: 0;
   background: var(--rose);
   transform: translateY(102%);
   transition: transform .35s cubic-bezier(.22,.68,.22,1);
 }
-.nav-cta:hover { color: #fff; }
-.nav-cta:hover::before { transform: none; }
+.nav-cta:hover,
+.nav-cta:focus-visible,
+.nav-cta:active { color: #fff; }
+.nav-cta:hover::before,
+.nav-cta:focus-visible::before,
+.nav-cta:active::before { transform: none; }
 
 /* Hero — wolny, premium ruch i mocniejsze wejście tekstu */
 .hero-bg {
