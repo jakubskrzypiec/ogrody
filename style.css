@@ -115,7 +115,7 @@ h3 { font-size: clamp(32px, 3vw, 48px); line-height: .98; }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('hero-alt.webp') 66% center / cover no-repeat;
+  background: url('hero-modern.webp') 56% center / cover no-repeat;
   transform: scale(1.02);
   animation: hero-in 1.5s cubic-bezier(.2,.8,.2,1) forwards;
 }
@@ -427,7 +427,7 @@ h3 { font-size: clamp(32px, 3vw, 48px); line-height: .98; }
   background: linear-gradient(90deg, #f7f1eb 0%, #fffaf4 56%);
   border: 1px solid rgba(41,69,53,.1);
   display: grid;
-  grid-template-columns: .86fr 1.14fr;
+  grid-template-columns: .82fr 1.18fr;
   overflow: hidden;
 }
 .social-copy { padding: clamp(54px, 6vw, 88px); display: flex; flex-direction: column; justify-content: center; }
@@ -453,115 +453,17 @@ h3 { font-size: clamp(32px, 3vw, 48px); line-height: .98; }
   box-shadow: 0 12px 24px rgba(32,30,27,.05);
   transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
 }
-.social-actions a:hover {
-  transform: translateY(-2px);
-  border-color: rgba(41,69,53,.24);
-  box-shadow: 0 16px 28px rgba(32,30,27,.08);
-}
-.social-icon {
-  width: 28px;
-  height: 28px;
-  display: grid;
-  place-items: center;
-  color: var(--green);
-  background: rgba(41,69,53,.08);
-  border-radius: 50%;
-  flex: 0 0 auto;
-}
+.social-actions a:hover { transform: translateY(-2px); border-color: rgba(41,69,53,.24); box-shadow: 0 16px 28px rgba(32,30,27,.08); }
+.social-icon { width: 28px; height: 28px; display: grid; place-items: center; color: var(--green); background: rgba(41,69,53,.08); border-radius: 50%; flex: 0 0 auto; }
 .social-actions a:first-child .social-icon { color: var(--rose); background: rgba(201,111,125,.11); }
 .social-icon svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.6; }
 .social-icon path { fill: currentColor; stroke: none; }
-.device-stage {
-  position: relative;
-  min-height: 580px;
-  display: grid;
-  place-items: center;
-  background: linear-gradient(145deg, #f5eee7 0%, #fffaf4 65%, #efe6dc 100%);
-  overflow: hidden;
-}
-.device-stage::before, .device-stage::after { content: ""; position: absolute; width: 240px; height: 240px; border: 1px solid rgba(41,69,53,.08); border-radius: 50%; }
-.device-stage::before { right: -76px; top: -76px; }
-.device-stage::after { left: -110px; bottom: -90px; width: 280px; height: 280px; }
-.device-link { position: relative; display: block; color: inherit; }
-.laptop { width: min(540px, 74%); transform: translateX(7%); z-index: 1; }
-.laptop-screen {
-  position: relative;
-  aspect-ratio: 16/10;
-  border: 8px solid #d1d4d1;
-  border-bottom-width: 14px;
-  border-radius: 22px 22px 12px 12px;
-  background: linear-gradient(180deg, #fbfbfa 0%, #f2f3f1 100%);
-  box-shadow: 0 28px 56px rgba(38,37,33,.16);
-  overflow: hidden;
-}
-.laptop-screen::before {
-  content: "";
-  position: absolute;
-  z-index: 2;
-  top: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 56px;
-  height: 4px;
-  border-radius: 999px;
-  background: rgba(41,69,53,.14);
-}
-.device-screen-clean {
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 18px;
-  height: 100%;
-}
-.device-logo { width: min(230px, 52%); }
-.device-logo-phone { width: 74%; }
-.device-divider { width: 72px; height: 1px; background: rgba(41,69,53,.18); }
-.device-network {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--green-deep);
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: .15em;
-  text-transform: uppercase;
-}
-.device-network svg { width: 18px; height: 18px; }
-.device-network-instagram svg { fill: none; stroke: var(--rose); stroke-width: 1.7; }
-.device-network-instagram svg circle, .device-network-instagram svg rect { fill: none; }
-.device-network-facebook svg { fill: var(--green); }
-.laptop-base {
-  height: 14px;
-  width: 118%;
-  margin-left: -9%;
-  background: linear-gradient(180deg, #e1e2df 0%, #c9cac8 100%);
-  border-radius: 0 0 26px 26px;
-  clip-path: polygon(6% 0,94% 0,100% 72%,70% 100%,30% 100%,0 72%);
-  box-shadow: 0 16px 22px rgba(32,30,27,.1);
-}
-.phone { position: absolute; width: 154px; left: 12%; bottom: 8%; transform: rotate(-7deg); z-index: 2; }
-.phone-shell {
-  position: relative;
-  aspect-ratio: .52/1;
-  background: linear-gradient(160deg, #343736, #181b19);
-  border-radius: 34px;
-  box-shadow: 0 22px 48px rgba(32,30,27,.22);
-  overflow: hidden;
-  padding: 6px;
-}
-.phone-shell::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border: 1px solid rgba(255,255,255,.14);
-  border-radius: 34px;
-  pointer-events: none;
-}
-.phone-notch { position: absolute; z-index: 2; top: 12px; left: 50%; transform: translateX(-50%); width: 54px; height: 14px; border-radius: 10px; background: #111313; }
-.phone-screen { aspect-ratio: .52/1; padding: 38px 12px 18px; border-radius: 28px; background: #fff; }
-.phone-screen .device-network { font-size: 9px; text-align: center; gap: 8px; }
+.social-visual { position: relative; min-height: 580px; overflow: hidden; background: var(--cream-3); }
+.social-visual img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.social-visual::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 0 0 1px rgba(41,69,53,.06); pointer-events: none; }
+.social-visual-links { position: absolute; inset: 0; display: grid; grid-template-columns: 1fr 1fr; }
+.social-visual-links a { display: block; }
+.social-visual-links a:focus-visible { outline: 2px solid var(--green); outline-offset: -6px; }
 
 /* Sklep */
 .shop-cta { background: var(--cream); border-top: 1px solid var(--line); }
@@ -683,7 +585,7 @@ h3 { font-size: clamp(32px, 3vw, 48px); line-height: .98; }
   .site-header.menu-open .brand-dark { opacity: 0; }
 
   .hero { min-height: 780px; }
-  .hero-bg { background-position: 61% center; }
+  .hero-bg { background-position: 66% center; }
   .hero-shade { background: linear-gradient(0deg, rgba(12,20,16,.78) 0%, rgba(12,20,16,.42) 42%, rgba(12,20,16,.08) 100%); }
   .hero-content { width: calc(100% - 28px); margin: 0 14px 92px; }
   .hero h1 { font-size: clamp(52px, 15vw, 74px); max-width: 100%; }
@@ -726,11 +628,7 @@ h3 { font-size: clamp(32px, 3vw, 48px); line-height: .98; }
   .social-copy { padding: 38px 28px; }
   .social-copy h2 { font-size: 58px; }
   .social-actions a { min-width: calc(50% - 7px); }
-  .device-stage { min-height: 470px; }
-  .laptop { width: 79%; transform: translate(7%, -1%); }
-  .device-logo { width: 54%; }
-  .phone { width: 126px; left: 7%; bottom: 6%; }
-  .phone-screen { padding: 38px 12px 18px; }
+  .social-visual { min-height: 430px; }
 
   .shop-cta { padding-inline: 14px; }
   .shop-grid { gap: 24px; }

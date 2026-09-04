@@ -57,40 +57,12 @@ if (!reducedMotion && window.innerWidth > 760) {
   }, { passive: true });
 }
 
+const realGallery = ['realizacja-real-01.webp', 'realizacja-real-02.webp', 'realizacja-real-03.webp', 'realizacja-real-04.webp', 'realizacja-real-05.webp'];
 const galleries = {
-  1: Array.from({length: 8}, (_, i) => `realizacja-1-${String(i + 1).padStart(2, '0')}.webp`),
-  2: Array.from({length: 9}, (_, i) => `realizacja-2-${String(i + 1).padStart(2, '0')}.webp`),
-  3: Array.from({length: 8}, (_, i) => `realizacja-3-${String(i + 1).padStart(2, '0')}.webp`),
+  1: realGallery,
+  2: realGallery,
+  3: realGallery,
 };
-
-// Okładki realizacji zmieniają się co 3 sekundy, ale galerie pozostają rozdzielone.
-if (!reducedMotion) {
-  document.querySelectorAll('.project-card[data-gallery]').forEach((card, cardIndex) => {
-    const galleryNumber = Number(card.dataset.gallery);
-    const image = card.querySelector('[data-cover-image]');
-    const images = galleries[galleryNumber];
-    let index = 0;
-    let paused = false;
-
-    card.addEventListener('mouseenter', () => paused = true);
-    card.addEventListener('mouseleave', () => paused = false);
-    card.addEventListener('focusin', () => paused = true);
-    card.addEventListener('focusout', () => paused = false);
-
-    setTimeout(() => {
-      setInterval(() => {
-        if (paused || document.body.classList.contains('gallery-open')) return;
-        index = (index + 1) % images.length;
-        image.classList.add('cover-changing');
-        setTimeout(() => {
-          image.src = images[index];
-          image.onload = () => image.classList.remove('cover-changing');
-          if (image.complete) image.classList.remove('cover-changing');
-        }, 180);
-      }, 3000);
-    }, cardIndex * 700);
-  });
-}
 
 const modal = document.getElementById('galleryModal');
 const galleryImage = document.getElementById('galleryImage');
