@@ -1383,3 +1383,85 @@ p, a, strong, span { overflow-wrap: break-word; }
 /* Hero ma własną animację wejścia — bez podwójnego blura z .reveal */
 .hero-content.reveal { filter: none; }
 .hero-content.reveal.visible { filter: none; }
+
+
+/* === FINAL FIX: realizacje / lightbox === */
+.projects {
+  min-height: auto;
+  padding-top: clamp(72px, 6vw, 96px);
+  padding-bottom: clamp(64px, 5vw, 84px);
+}
+.projects-head { margin-bottom: 34px; }
+.project-card-media { aspect-ratio: .92; }
+.project-card-body {
+  min-height: 92px;
+  padding: 18px 20px 20px;
+  overflow: visible;
+}
+.project-meta { gap: 6px; }
+.project-meta b {
+  display: block;
+  font-size: clamp(31px, 2.2vw, 40px);
+  line-height: 1;
+  padding-bottom: 2px;
+  white-space: normal;
+  overflow: visible;
+}
+.project-meta small { line-height: 1.45; }
+.project-hint {
+  max-width: 760px;
+  line-height: 1.6;
+  letter-spacing: .1em;
+}
+.gallery-close {
+  position: fixed !important;
+  top: max(20px, env(safe-area-inset-top)) !important;
+  right: max(20px, env(safe-area-inset-right)) !important;
+  left: auto !important;
+  z-index: 9999 !important;
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  line-height: 1;
+  border-radius: 50%;
+  background: rgba(255,255,255,.06);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.gallery-modal.single-image .gallery-nav,
+.gallery-modal.single-image .gallery-thumbs { display: none !important; }
+.gallery-modal.single-image.open {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+.gallery-modal.single-image .gallery-stage {
+  grid-column: 1;
+  width: min(1180px, calc(100vw - 150px));
+  height: calc(100dvh - 110px);
+  margin: 55px auto 25px;
+}
+.gallery-modal.single-image .gallery-stage img {
+  max-width: 100%;
+  max-height: calc(100dvh - 160px);
+  object-fit: contain;
+}
+@media (max-width: 780px) {
+  .projects-head { margin-bottom: 26px; }
+  .project-card-media { aspect-ratio: 1 / .92; }
+  .project-card-body { min-height: 86px; padding: 16px 16px 18px; }
+  .project-meta b { font-size: clamp(30px, 9vw, 38px); }
+  .gallery-close {
+    top: max(12px, env(safe-area-inset-top)) !important;
+    right: max(12px, env(safe-area-inset-right)) !important;
+    width: 46px;
+    height: 46px;
+  }
+  .gallery-modal.single-image .gallery-stage {
+    width: calc(100vw - 24px);
+    height: calc(100dvh - 96px);
+    margin: 58px 12px 18px;
+  }
+  .gallery-modal.single-image .gallery-stage img { max-height: calc(100dvh - 150px); }
+}

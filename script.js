@@ -101,40 +101,11 @@ if (hero && heroBg && finePointer && !reducedMotion) {
   });
 }
 
-// Galerie — pełne, rozdzielone zestawy fotografii Effkowe Ogrody z portfolio.
-const base = 'https://static.oferteo.pl/images/portfolio/7318627/orig/';
+// Galerie — na tym etapie po jednej wstępnej wizualizacji AI na realizację.
 const galleries = {
-  1: [
-    '1768857268427-crop-1000022974.jpg',
-    '1768857276491-crop-1000022972.jpg',
-    '1768857284632-crop-1000022971.jpg',
-    '1768857293501-crop-1000022970.jpg',
-    '1768857299242-crop-1000022969.jpg',
-    '1768857304831-crop-1000022968.jpg',
-    '1768857311100-crop-1000022963.jpg',
-    '1768857318070-crop-1000022961.jpg',
-    '1768857324492-crop-1000022962.jpg',
-    '1768857331008-crop-1000022960.jpg'
-  ].map(file => base + file),
-  2: [
-    '1768857339498-crop-1000022530.jpg',
-    '1768857346050-crop-1000016603.jpg',
-    '1768857351531-crop-1000016602.jpg',
-    '1768857357634-crop-1000016601.jpg',
-    '1768857363292-crop-1000016600.jpg',
-    '1768857369130-crop-1000016599.jpg',
-    '1768856786470-crop-1000034114.jpg',
-    '1768856812992-crop-1000032832.jpg'
-  ].map(file => base + file),
-  3: [
-    '1768856789161-crop-1000032292.jpg',
-    '1768856793850-crop-1000032291.jpg',
-    '1768856798201-crop-1000032823.jpg',
-    '1768856802770-crop-1000032829.jpg',
-    '1768856807890-crop-1000032826.jpg',
-    '1768856825181-crop-1000028673.jpg',
-    '1768856833991-crop-1000024318.jpg'
-  ].map(file => base + file),
+  1: ['realizacja-wstepna-01.webp'],
+  2: ['realizacja-wstepna-02.webp'],
+  3: ['realizacja-wstepna-03.webp'],
 };
 
 const modal = document.getElementById('galleryModal');
@@ -191,7 +162,8 @@ function updateGallery(animate = false) {
     galleryImage.alt = `Realizacja ${String(activeGallery).padStart(2, '0')} — ujęcie ${activeIndex + 1}`;
     galleryCurrent.textContent = String(activeIndex + 1).padStart(2, '0');
     galleryTotal.textContent = String(images.length).padStart(2, '0');
-    galleryCaption.textContent = `Realizacja ${String(activeGallery).padStart(2, '0')} · ujęcie ${String(activeIndex + 1).padStart(2, '0')}`;
+    galleryCaption.textContent = `Realizacja ${String(activeGallery).padStart(2, '0')} · wizualizacja AI · podgląd wstępny`;
+    modal?.classList.toggle('single-image', images.length === 1);
     [...galleryThumbs.children].forEach((el, i) => el.classList.toggle('active', i === activeIndex));
     galleryThumbs.children[activeIndex]?.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', inline: 'center', block: 'nearest' });
     preloadAround();
