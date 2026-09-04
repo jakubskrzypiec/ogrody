@@ -85,6 +85,7 @@ if (!reducedMotion) {
         setTimeout(() => {
           image.src = images[index];
           image.onload = () => image.classList.remove('cover-changing');
+          if (image.complete) image.classList.remove('cover-changing');
         }, 180);
       }, 3000);
     }, cardIndex * 700);

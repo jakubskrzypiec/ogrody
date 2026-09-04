@@ -55,7 +55,7 @@
           <h2>O mnie.</h2>
           <p class="lead-copy">Nazywam się Ewa Katrycz. Jestem architektką krajobrazu i projektantką ogrodów. Tworzę przestrzenie, które mają wyglądać dobrze, ale przede wszystkim dobrze działać — dla ludzi, którzy będą z nich korzystać każdego dnia.</p>
           <p>Projektuję kompletne ogrody, prowadzę konsultacje online i tworzę gotowe projekty rabat. W pracy łączę funkcję, kompozycję, rośliny i realne warunki działki, tak żeby efekt był spójny nie tylko na wizualizacji, ale również po latach użytkowania.</p>
-          <div class="award-note">Laureatka Gali Businesswoman Awards 2025</div>
+          <div class="award-note"><span>Laureatka Gali Businesswoman Awards 2025</span></div>
         </div>
       </div>
     </section>
@@ -103,22 +103,28 @@
       </div>
 
       <div class="project-grid" data-project-covers>
-        <button class="project-card reveal" type="button" data-gallery="1" aria-label="Otwórz galerię realizacji 01">
+        <button class="project-card project-card-large reveal" type="button" data-gallery="1" aria-label="Otwórz galerię realizacji 01">
           <img src="realizacja-1-01.webp" alt="Projekt ogrodu — realizacja 01" loading="lazy" data-cover-image>
+          <span class="project-tag">8 ujęć</span>
           <span class="project-overlay"></span>
-          <span class="project-meta"><b>Realizacja 01</b><small>8 ujęć · otwórz galerię</small></span>
+          <span class="project-meta"><small>Otwórz galerię</small><b>Realizacja 01</b></span>
         </button>
+
         <button class="project-card reveal delay-1" type="button" data-gallery="2" aria-label="Otwórz galerię realizacji 02">
           <img src="realizacja-2-01.webp" alt="Projekt ogrodu — realizacja 02" loading="lazy" data-cover-image>
+          <span class="project-tag">9 ujęć</span>
           <span class="project-overlay"></span>
-          <span class="project-meta"><b>Realizacja 02</b><small>9 ujęć · otwórz galerię</small></span>
+          <span class="project-meta"><small>Otwórz galerię</small><b>Realizacja 02</b></span>
         </button>
+
         <button class="project-card reveal delay-2" type="button" data-gallery="3" aria-label="Otwórz galerię realizacji 03">
           <img src="realizacja-3-01.webp" alt="Projekt ogrodu — realizacja 03" loading="lazy" data-cover-image>
+          <span class="project-tag">8 ujęć</span>
           <span class="project-overlay"></span>
-          <span class="project-meta"><b>Realizacja 03</b><small>8 ujęć · otwórz galerię</small></span>
+          <span class="project-meta"><small>Otwórz galerię</small><b>Realizacja 03</b></span>
         </button>
       </div>
+      <div class="project-hint">Kliknij wybraną realizację, żeby otworzyć pełną galerię.</div>
     </section>
 
     <section class="google-reviews section" id="opinie">
@@ -168,28 +174,40 @@
               Instagram
             </a>
             <a href="https://www.facebook.com/p/Effkowe-Ogrody-100091580650026/?locale=pl_PL" target="_blank" rel="noopener">
-              <span class="social-icon social-icon-f" aria-hidden="true">f</span>
+              <span class="social-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M13.4 20v-6.3h2.4l.4-2.8h-2.8V9.1c0-.8.2-1.4 1.4-1.4h1.5V5.2c-.3 0-1.2-.1-2.2-.1-2.2 0-3.8 1.3-3.8 3.8v2.1H8v2.8h2.3V20h3.1z"></path></svg>
+              </span>
               Facebook
             </a>
           </div>
         </div>
 
-        <div class="device-stage" aria-hidden="true">
-          <div class="laptop">
-            <div class="laptop-screen">
-              <img class="screen-bg" src="przerywnik-ogrod.webp" alt="">
-              <img class="screen-logo" src="logo-light.png" alt="">
+        <div class="device-stage">
+          <a class="device-link laptop" href="https://www.facebook.com/p/Effkowe-Ogrody-100091580650026/?locale=pl_PL" target="_blank" rel="noopener" aria-label="Przejdź do Facebooka Effkowe Ogrody">
+            <div class="laptop-screen device-screen-clean">
+              <img class="device-logo" src="logo-dark.png" alt="Effkowe Ogrody">
+              <span class="device-divider"></span>
+              <span class="device-network device-network-facebook">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.4 20v-6.3h2.4l.4-2.8h-2.8V9.1c0-.8.2-1.4 1.4-1.4h1.5V5.2c-.3 0-1.2-.1-2.2-.1-2.2 0-3.8 1.3-3.8 3.8v2.1H8v2.8h2.3V20h3.1z"></path></svg>
+                <strong>Facebook</strong>
+              </span>
             </div>
             <div class="laptop-base"></div>
-          </div>
-          <div class="phone">
-            <div class="phone-notch"></div>
-            <div class="phone-grid">
-              <img src="realizacja-1-01.webp" alt=""><img src="realizacja-2-01.webp" alt=""><img src="realizacja-3-01.webp" alt="">
-              <img src="realizacja-1-03.webp" alt=""><img src="realizacja-2-04.webp" alt=""><img src="realizacja-3-03.webp" alt="">
-              <img src="realizacja-1-06.webp" alt=""><img src="realizacja-2-07.webp" alt=""><img src="realizacja-3-06.webp" alt="">
+          </a>
+
+          <a class="device-link phone" href="https://www.instagram.com/effkowy.ogrod/" target="_blank" rel="noopener" aria-label="Przejdź do Instagrama Effkowe Ogrody">
+            <div class="phone-shell">
+              <div class="phone-notch"></div>
+              <div class="phone-screen device-screen-clean">
+                <img class="device-logo device-logo-phone" src="logo-dark.png" alt="Effkowe Ogrody">
+                <span class="device-divider"></span>
+                <span class="device-network device-network-instagram">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.4" cy="6.8" r="1"></circle></svg>
+                  <strong>Instagram</strong>
+                </span>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </section>
@@ -203,9 +221,9 @@
           <a class="shop-button" href="https://www.naffy.io/effkowy-ogrod" target="_blank" rel="noopener">Przejdź do sklepu</a>
         </div>
         <div class="shop-visual reveal delay-1" aria-label="Przykładowe plansze gotowych projektów rabat">
-          <div class="project-sheet sheet-one"><img src="realizacja-1-03.webp" alt=""><span>Projekt rabaty</span></div>
-          <div class="project-sheet sheet-two"><img src="realizacja-2-04.webp" alt=""><span>Układ roślin</span></div>
-          <div class="project-sheet sheet-three"><img src="realizacja-3-03.webp" alt=""><span>Gotowy plan</span></div>
+          <div class="project-sheet sheet-one"><img src="sklep-projekt-rabaty.png" alt="Projekt rabaty"><span>Projekt rabaty</span></div>
+          <div class="project-sheet sheet-two"><img src="sklep-uklad-roslin.png" alt="Układ roślin"><span>Układ roślin</span></div>
+          <div class="project-sheet sheet-three"><img src="sklep-gotowy-plan.png" alt="Gotowy plan"><span>Gotowy plan</span></div>
         </div>
       </div>
     </section>
