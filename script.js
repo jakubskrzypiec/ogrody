@@ -58,9 +58,9 @@ if (!reducedMotion && window.innerWidth > 760) {
 }
 
 const galleries = {
-  1: ['realizacja-1-01.webp', 'realizacja-1-02.webp', 'realizacja-1-03.webp', 'realizacja-1-04.webp', 'realizacja-1-05.webp', 'realizacja-1-06.webp', 'realizacja-1-07.webp', 'realizacja-1-08.webp'],
-  2: ['realizacja-2-01.webp', 'realizacja-2-02.webp', 'realizacja-2-03.webp', 'realizacja-2-04.webp', 'realizacja-2-05.webp', 'realizacja-2-06.webp', 'realizacja-2-07.webp', 'realizacja-2-08.webp', 'realizacja-2-09.webp'],
-  3: ['realizacja-3-01.webp', 'realizacja-3-02.webp', 'realizacja-3-03.webp', 'realizacja-3-04.webp', 'realizacja-3-05.webp', 'realizacja-3-06.webp', 'realizacja-3-07.webp', 'realizacja-3-08.webp'],
+  1: ['realizacja-fb-01.webp'],
+  2: ['realizacja-fb-02.webp'],
+  3: ['realizacja-fb-03.webp'],
 };
 
 const modal = document.getElementById('galleryModal');
@@ -98,6 +98,10 @@ function renderThumbs() {
 function updateGallery() {
   const images = galleries[activeGallery];
   const src = images[activeIndex];
+  const isSingleImage = images.length <= 1;
+  if (prevBtn) prevBtn.hidden = isSingleImage;
+  if (nextBtn) nextBtn.hidden = isSingleImage;
+  if (galleryThumbs) galleryThumbs.hidden = isSingleImage;
   galleryImage.src = src;
   galleryImage.alt = `Realizacja ${String(activeGallery).padStart(2, '0')} — ujęcie ${activeIndex + 1}`;
   galleryCurrent.textContent = String(activeIndex + 1).padStart(2, '0');
