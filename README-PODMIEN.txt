@@ -1,16 +1,18 @@
-EFFKOWE OGRODY — REWORK 04.09.2026
+EFFKOWE OGRODY — PREMIUM FINAL
 
-W repo podmień:
-- index.html
-- style.css
-- script.js
+Gotowe repo do wrzucenia na GitHub Pages.
 
-Dodaj nowy plik:
-- proces-projektowy.png
+Najważniejsze zmiany:
+- galerie realizacji mają ponownie wiele ujęć (10 / 8 / 7), a zdjęcia w lightboxie są wyświetlane w całości bez cropowania,
+- galeria ma strzałki, miniatury, obsługę klawiatury i swipe na telefonie,
+- pełny responsive pass dla telefonu/tabletu: hero, oferta, realizacje, sociale, sklep, FAQ, formularz i footer,
+- premium animacje: wejścia sekcji, parallax, mikrointerakcje kart/przycisków, subtelny tilt realizacji, animowany header i progress scrolla,
+- respektowane prefers-reduced-motion,
+- ciężkie PNG sekcji projektowej/sklepu zostały zamienione na WebP dla szybszego ładowania.
 
-Pozostałych zdjęć realizacji / logo / przerywników NIE usuwaj — nowy kod nadal z nich korzysta.
+Galerie realizacji korzystają ze zdjęć portfolio Effkowe Ogrody hostowanych w Oferteo (static.oferteo.pl).
 
 DO UZUPEŁNIENIA PRZED PUBLIKACJĄ:
-1. Zdjęcie Ewy — na razie jest świadomy placeholder w sekcji O mnie.
-2. Link do opinii Google — w index.html znajdź klasę google-link i zamień href="#" na właściwy adres profilu/opinii.
-3. Ewentualne finalne copy oferty — obecne jest robocze, zgodne z zakresem: projekt ogrodu / konsultacja online / gotowe rabaty.
+1. Zdjęcie Ewy — obecnie placeholder w sekcji O mnie.
+2. Link do opinii Google — w index.html znajdź klasę google-link i podmień href="#".
+3. Opcjonalnie finalne copy oferty.
