@@ -102,7 +102,7 @@ if (hero && heroBg && finePointer && !reducedMotion) {
 }
 
 // Galerie — na tym etapie po jednej wstępnej wizualizacji AI na realizację.
-const galleries = {
+const galleries = window.projectGallery || {
   1: ['realizacja-wstepna-01.webp'],
   2: ['realizacja-wstepna-02.webp'],
   3: ['realizacja-wstepna-03.webp'],
@@ -159,10 +159,10 @@ function updateGallery(animate = false) {
   if (animate && !reducedMotion) galleryImage.classList.add('is-changing');
   const swap = () => {
     galleryImage.src = src;
-    galleryImage.alt = `Realizacja ${String(activeGallery).padStart(2, '0')} — ujęcie ${activeIndex + 1}`;
+    galleryImage.alt = `Projekt ${String(activeGallery).padStart(2, '0')} — ujęcie ${activeIndex + 1}`;
     galleryCurrent.textContent = String(activeIndex + 1).padStart(2, '0');
     galleryTotal.textContent = String(images.length).padStart(2, '0');
-    galleryCaption.textContent = `Realizacja ${String(activeGallery).padStart(2, '0')} · wizualizacja AI · podgląd wstępny`;
+    galleryCaption.textContent = `Projekt ${String(activeGallery).padStart(2, '0')} · wizualizacja poglądowa`;
     modal?.classList.toggle('single-image', images.length === 1);
     [...galleryThumbs.children].forEach((el, i) => el.classList.toggle('active', i === activeIndex));
     galleryThumbs.children[activeIndex]?.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', inline: 'center', block: 'nearest' });
@@ -179,7 +179,7 @@ galleryImage?.addEventListener('error', () => {
 
 function openGallery(number, trigger) {
   activeGallery = Number(number);
-  activeIndex = 0;
+  activeIndex = Number(trigger?.dataset.index || 0);
   lastTrigger = trigger;
   renderThumbs();
   updateGallery(false);
@@ -193,6 +193,7 @@ function closeGallery() {
   modal.classList.remove('open');
   modal.setAttribute('aria-hidden', 'true');
   body.classList.remove('gallery-open');
+  document.querySelectorAll('header, main, footer').forEach(el => { el.inert = false; });
   lastTrigger?.focus({ preventScroll: true });
 }
 
@@ -203,7 +204,7 @@ function moveGallery(direction) {
 }
 
 document.querySelectorAll('[data-gallery]').forEach(button => {
-  button.addEventListener('click', () => openGallery(button.dataset.gallery, button));
+  button.addEventListener('click', event => { event.preventDefault(); openGallery(button.dataset.gallery, button); });
 });
 closeBtn?.addEventListener('click', closeGallery);
 prevBtn?.addEventListener('click', () => moveGallery(-1));
