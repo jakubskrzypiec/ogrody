@@ -1,15 +1,15 @@
 /* The compact editorial language shared by the inner pages. */
 .main-nav a[aria-current=page]:not(.nav-cta){position:relative}
 .main-nav a[aria-current=page]:not(.nav-cta)::after{content:"";position:absolute;bottom:3px;left:0;right:0;height:1px;background:currentColor;opacity:.6;transform:scaleX(1)}
-.page-hero{position:relative;isolation:isolate;overflow:hidden;background:var(--green-deep);color:var(--white);margin-top:var(--header-h);min-height:360px;padding:62px 6vw 68px}
-.page-hero-inner{position:relative;z-index:2;width:var(--page);margin:auto}
+.page-hero{position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:flex-end;background:var(--green-deep);color:var(--white);margin-top:var(--header-h);min-height:360px;padding:50px 6vw}
+.page-hero-inner{position:relative;z-index:2;width:var(--page);margin:0 auto}
 .page-hero .eyebrow{color:#d3ddd0;font-size:11px;letter-spacing:.18em;margin-bottom:28px}
 .page-hero .eyebrow span{display:inline-block;margin-right:22px;color:var(--sage)}
-.page-hero h1{color:var(--white);font-size:clamp(72px,6.5vw,110px);line-height:.95;margin:0 0 26px;max-width:880px}
+.page-hero h1{color:var(--white);font-size:clamp(72px,6.5vw,110px);line-height:.95;margin:0;max-width:880px}
 .page-hero-lead{font-size:16px;line-height:1.8;color:#e1e6dd;max-width:600px;margin:0}
-.page-hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;z-index:-2;filter:saturate(.8)}
-.page-hero::after{content:"";position:absolute;inset:0;z-index:-1;background:rgba(13,25,18,.58)}
-.page-hero-word{position:absolute;right:-.01em;bottom:-.15em;font:clamp(150px,17vw,290px)/1 var(--serif);letter-spacing:-.04em;opacity:.08;pointer-events:none;white-space:nowrap;color:var(--white);z-index:1}
+.page-hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 58%;opacity:1;z-index:-2;filter:saturate(.8)}
+.page-hero::after{content:"";position:absolute;inset:0;z-index:-1;background:rgba(13,25,18,.6)}
+.page-hero-word{position:absolute;right:3vw;bottom:-.06em;font:clamp(140px,15vw,250px)/1 var(--serif);letter-spacing:-.04em;opacity:.26;pointer-events:none;white-space:nowrap;color:var(--white);z-index:1}
 .detail-page .page-hero h1{font-size:clamp(46px,4.5vw,76px);max-width:920px;line-height:1.05}
 .detail-page .page-hero{min-height:340px}
 .image-editorial{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);background:var(--cream-3);min-height:570px}
@@ -64,7 +64,7 @@
 @media(max-width:1100px){.image-editorial-copy{padding:45px 35px}.page-hero{min-height:340px}.page-invitation{gap:35px}.page-invitation .hero-btn{max-width:300px;text-align:center}.portfolio-tile-caption{align-items:flex-start;flex-direction:column;gap:8px}}
 @media(max-width:780px){
  .page-hero{margin-top:var(--header-h);min-height:330px;padding:45px 20px 50px}
- .page-hero-inner{width:100%}.page-hero h1{font-size:68px;margin-bottom:24px}.page-hero .eyebrow{font-size:10px;line-height:1.8;margin-bottom:25px;letter-spacing:.1em}.page-hero .eyebrow span{margin-right:12px}.page-hero-lead{font-size:15px;max-width:95%;line-height:1.8}.page-hero-word{font-size:140px;bottom:-.1em;opacity:.06}
+ .page-hero-inner{width:100%}.page-hero h1{font-size:68px;margin-bottom:0}.page-hero .eyebrow{font-size:10px;line-height:1.8;margin-bottom:25px;letter-spacing:.1em}.page-hero .eyebrow span{margin-right:12px}.page-hero-lead{font-size:15px;max-width:95%;line-height:1.8}.page-hero-word{font-size:clamp(84px,23vw,160px);right:12px;bottom:0;opacity:.23}
  .detail-page .page-hero h1{font-size:44px}.detail-page .page-hero{min-height:330px}
  .image-editorial{grid-template-columns:1fr;min-height:0}.image-editorial-media{order:0!important;min-height:0;aspect-ratio:1.35}.image-editorial-copy{order:1!important;padding:42px 22px 50px}.image-editorial-copy h2{font-size:48px}.image-editorial-copy p:not(.eyebrow){font-size:16px}
  .subpage-divider{height:240px}.portfolio-index-head{grid-template-columns:1fr;gap:25px;margin-bottom:40px}.portfolio-index-head h2{font-size:52px}.portfolio-index-grid{grid-template-columns:1fr;gap:38px}.portfolio-tile-caption{flex-direction:row;align-items:baseline}.portfolio-tile-caption h3{font-size:32px}.portfolio-tile-caption>span{font-size:9px}.portfolio-tile-image{aspect-ratio:1.12}.portfolio-tile-brand{font-size:52px}
