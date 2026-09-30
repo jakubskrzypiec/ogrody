@@ -25,8 +25,10 @@
 .offer-text-heading h2{font-size:clamp(45px,4.5vw,72px);line-height:1.04;max-width:580px}
 .offer-text-body p{font-size:17px;line-height:1.95;color:var(--muted);margin-bottom:24px;max-width:650px}
 .offer-text-body p:last-child{margin-bottom:0}
-.offer-editorial-photo{margin:0;padding:0 6vw;background:var(--cream-3)}
+.offer-editorial-photo{margin:0;padding:0;background:var(--cream-3)}
 .offer-editorial-photo img{width:100%;height:clamp(240px,26vw,380px);object-fit:cover;object-position:center 58%}
+.offer-page .offer-inquiry{flex-direction:column;align-items:flex-start;gap:32px}
+.offer-page .offer-inquiry .hero-btn{margin-top:0;width:auto;max-width:100%;min-height:56px;border-radius:999px}
 @media(max-width:1100px){.offer-intro-paragraphs{gap:35px}.offer-documentation-feature .offer-deliverables{gap:0 28px}.offer-documentation-feature .offer-deliverables h3{font-size:32px}.offer-documentation-feature .offer-section-heading{gap:24px 4vw}}
 @media(max-width:780px){
  .offer-editorial-intro{padding-top:60px;padding-bottom:60px}.offer-editorial-intro h2{font-size:clamp(47px,11.4vw,68px);margin-bottom:30px}.offer-editorial-intro>.eyebrow{font-size:10px;letter-spacing:.14em}
@@ -34,5 +36,6 @@
  .offer-documentation-feature .offer-section-heading{display:block;margin-bottom:35px}.offer-documentation-feature .offer-section-heading>.eyebrow{margin-bottom:20px}.offer-documentation-feature .offer-section-heading h2{font-size:50px;margin-bottom:25px}.offer-scope-note{font-size:16px}
  .offer-documentation-feature .offer-deliverables{grid-template-columns:1fr}.offer-documentation-feature .offer-deliverables li{display:grid;grid-template-columns:45px 1fr;gap:20px;padding:28px 0}.offer-documentation-feature .offer-deliverables li>span{font-size:39px;margin:0}.offer-documentation-feature .offer-deliverables h3{font-size:33px;margin-bottom:16px}.offer-documentation-feature .offer-deliverables p{font-size:16px}
  .offer-page .offer-options{padding-top:55px;padding-bottom:60px}.offer-page .offer-options-grid h3{font-size:35px}.offer-page .offer-options .offer-section-heading h2{font-size:44px}
- .offer-text-section{grid-template-columns:1fr;gap:15px}.offer-text-heading h2{font-size:46px}.offer-text-body p{font-size:16px;line-height:1.9}.offer-editorial-photo{padding:0 16px}.offer-editorial-photo img{height:240px}
+ .offer-text-section{grid-template-columns:1fr;gap:15px}.offer-text-heading h2{font-size:46px}.offer-text-body p{font-size:16px;line-height:1.9}.offer-editorial-photo img{height:240px}
+ .offer-page .offer-inquiry{display:flex}
 }
