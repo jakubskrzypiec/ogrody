@@ -61,3 +61,15 @@
 .window-shadow.is-visible{animation-play-state:running}
 @keyframes window-breeze{0%,100%{transform:translate(-6%,-2%) rotate(-6deg) scale(1.02);opacity:.25}35%{transform:translate(4%,2%) rotate(4deg) scale(1.04);opacity:.36}65%{transform:translate(7%,-1%) rotate(1deg) scale(1.03);opacity:.30}}
 @media(prefers-reduced-motion:reduce){.window-shadow{animation:none!important;opacity:.26;will-change:auto}}
+/* Final refinements: portrait, heading rhythm and corner light. */
+main .hero h1{line-height:1.14!important}
+.page-hero h1{line-height:1.14!important}
+.landing-v2 .about-short .portrait-placeholder{max-width:420px;padding:8px;background:#fffdf8;border:1px solid #83957d50;border-radius:2px;box-shadow:0 16px 40px #29453510;transform:none;margin-top:8px;margin-bottom:8px}
+.landing-v2 .about-short .portrait-placeholder::before,.landing-v2 .about-short .portrait-placeholder::after{content:none;display:none}
+.landing-v2 .about-short .portrait-placeholder:hover{transform:none;box-shadow:0 16px 40px #29453510}
+.window-shadow{inset:auto;left:-4%;bottom:-4%;width:38%;height:48%;background:url('assets/atmosphere/leaf-shadow.svg') center/contain no-repeat;filter:blur(5px);mask-image:radial-gradient(ellipse at 30% 65%,#000 35%,transparent 78%);transform-origin:left bottom;animation:corner-breeze 7s ease-in-out infinite;animation-play-state:paused}
+.window-shadow.is-visible{animation-play-state:running}
+@keyframes corner-breeze{0%,100%{transform:translate(-2%,0) rotate(-3deg);opacity:.23}45%{transform:translate(3%,-2%) rotate(3deg);opacity:.34}75%{transform:translate(1%,1%) rotate(1deg);opacity:.27}}
+@media(min-width:781px){.main-nav a:not(.nav-cta){display:inline-flex;align-items:center;height:44px;line-height:1.4;padding-top:0;padding-bottom:0}.main-nav a:not(.nav-cta)::after,.main-nav a[aria-current=page]:not(.nav-cta)::after{bottom:4px}}
+@media(max-width:780px){.landing-v2 .about-short .portrait-placeholder{max-width:360px;padding:6px}.window-shadow{width:36%;height:45%}}
+@media(prefers-reduced-motion:reduce){.window-shadow{animation:none!important;opacity:.23}}

@@ -15,11 +15,10 @@
    constructor(el) {
      this.el=el;this.image=el.querySelector('.page-hero-image');this.visible=false;this.userPaused=false;this.time=0;this.width=0;this.height=0;
      this.canvas=document.createElement('canvas');this.canvas.className='garden-atmosphere';this.canvas.setAttribute('aria-hidden','true');el.append(this.canvas);this.ctx=this.canvas.getContext('2d',{alpha:true});
-     this.button=document.createElement('button');this.button.className='scene-toggle';this.button.type='button';el.append(this.button);this.button.addEventListener('click',()=>{this.userPaused=!this.userPaused;this.label();kick()});
      this.leaves=Array.from({length:15},(_,i)=>({phase:(i*.618)%1,duration:12+i%7,x:.03+(i*.077)% .29,size:3+i%5,drift:35+i*4,seed:i*1.72,color:['#c4ad69','#9ea576','#79915b','#b0a77c'][i%4]}));
      this.resizeObserver=new ResizeObserver(()=>this.resize());this.resizeObserver.observe(el);this.image.addEventListener('load',()=>{this.resize();kick()});this.label();this.resize();
    }
-   label(){const paused=this.userPaused||reduced.matches;this.button.setAttribute('aria-pressed',String(paused));this.button.textContent=paused?'Włącz animację ▶':'Zatrzymaj animację Ⅱ';this.button.setAttribute('aria-label',paused?'Włącz animację liści i ognia':'Zatrzymaj animację liści i ognia');}
+   label(){}
    resize(){const r=this.el.getBoundingClientRect();this.width=r.width;this.height=r.height;const d=Math.min(devicePixelRatio||1,2);this.canvas.width=Math.round(r.width*d);this.canvas.height=Math.round(r.height*d);this.ctx.setTransform(d,0,0,d,0,0);this.render();}
    point(x,y){const iw=this.image.naturalWidth||2172,ih=this.image.naturalHeight||724;const scale=Math.max(this.width/iw,this.height/ih);return {x:x*iw*scale+(this.width-iw*scale)/2,y:y*ih*scale+(this.height-ih*scale)/2,scale};}
    flame(cx,cy,w,h,phase){const c=this.ctx;const sway=Math.sin(this.time*3.8+phase)*w*.24;const gradient=c.createLinearGradient(cx,cy,cx,cy-h);gradient.addColorStop(0,'rgba(255,170,52,.62)');gradient.addColorStop(.48,'rgba(255,209,100,.8)');gradient.addColorStop(1,'rgba(251,139,22,0)');c.fillStyle=gradient;c.beginPath();c.moveTo(cx-w*.6,cy);c.bezierCurveTo(cx-w,cy-h*.25,cx+sway-w*.2,cy-h*.52,cx+sway,cy-h);c.bezierCurveTo(cx+w*.12+sway,cy-h*.5,cx+w*.9,cy-h*.3,cx+w*.5,cy);c.closePath();c.fill();}
