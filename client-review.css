@@ -70,3 +70,9 @@
 @media(max-width:780px){.landing-v2 .philosophy-media{height:300px;max-height:300px}}
 .landing-v2 .philosophy.section{padding-top:32px;padding-bottom:32px}
 @media(max-width:780px){.landing-v2 .philosophy.section{padding:0 20px 40px}}
+/* Show the supplied portrait in its complete, natural proportions. */
+.landing-v2 .about-short .portrait-placeholder{height:auto;min-height:0;width:100%;max-width:460px;margin-inline:auto;padding:0;display:block;background:none;border:0;overflow:visible}
+.landing-v2 .about-short .portrait-placeholder img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;object-position:center}
+.landing-v2 .about-short .portrait-placeholder::after{display:none}
+.landing-v2 .social-paper-bottom strong,.landing-v2 .social-paper-bottom>span{font-size:10px;color:#465845;line-height:1.6}
+.landing-v2 .carousel-caption .project-area{color:#56634e}
