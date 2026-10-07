@@ -80,8 +80,8 @@
     "images": [
       {
         "src": "assets/projects/02-01.webp",
-        "width": 1920,
-        "height": 1080,
+        "width": 3840,
+        "height": 2160,
         "source": "OGRÓD WROCŁAW - MALOWNICZY (1).jpg",
         "is_top": true
       },
@@ -136,15 +136,15 @@
       },
       {
         "src": "assets/projects/02-09.webp",
-        "width": 1920,
-        "height": 1080,
+        "width": 3840,
+        "height": 2160,
         "source": "OGRÓD WROCŁAW - MALOWNICZY (5).jpg",
         "is_top": false
       },
       {
         "src": "assets/projects/02-10.webp",
-        "width": 1920,
-        "height": 1080,
+        "width": 3840,
+        "height": 2160,
         "source": "OGRÓD WROCŁAW - MALOWNICZY (6).jpg",
         "is_top": false
       },
@@ -157,8 +157,8 @@
       },
       {
         "src": "assets/projects/02-12.webp",
-        "width": 1920,
-        "height": 1080,
+        "width": 3840,
+        "height": 2160,
         "source": "OGRÓD WROCŁAW - MALOWNICZY (8).jpg",
         "is_top": false
       },
@@ -188,8 +188,8 @@
     "images": [
       {
         "src": "assets/projects/03-01.webp",
-        "width": 1920,
-        "height": 1080,
+        "width": 3840,
+        "height": 2160,
         "source": "OGRÓD WROCŁAW - NOWOCZESNY (1).jpg",
         "is_top": true
       },
@@ -272,8 +272,8 @@
       },
       {
         "src": "assets/projects/03-13.webp",
-        "width": 1920,
-        "height": 1080,
+        "width": 3840,
+        "height": 2160,
         "source": "OGRÓD WROCŁAW - NOWOCZESNY (13).jpg",
         "is_top": false
       }
@@ -289,22 +289,22 @@
     "images": [
       {
         "src": "assets/projects/04-01.webp",
-        "width": 1920,
-        "height": 1080,
+        "width": 5120,
+        "height": 2880,
         "source": "OGRÓD TEKLINÓW  (1).jpg",
         "is_top": false
       },
       {
         "src": "assets/projects/04-02.webp",
-        "width": 1920,
-        "height": 1080,
+        "width": 5120,
+        "height": 2880,
         "source": "OGRÓD TEKLINÓW  (2).jpg",
         "is_top": false
       },
       {
         "src": "assets/projects/04-03.webp",
-        "width": 1920,
-        "height": 1080,
+        "width": 5120,
+        "height": 2880,
         "source": "OGRÓD TEKLINÓW  (3).jpg",
         "is_top": false
       },
@@ -317,15 +317,15 @@
       },
       {
         "src": "assets/projects/04-05.webp",
-        "width": 1920,
-        "height": 1080,
+        "width": 5120,
+        "height": 2880,
         "source": "OGRÓD TEKLINÓW  (5).jpg",
         "is_top": false
       },
       {
         "src": "assets/projects/04-06.webp",
-        "width": 1920,
-        "height": 1080,
+        "width": 5120,
+        "height": 2880,
         "source": "OGRÓD TEKLINÓW  (6).jpg",
         "is_top": false
       },
@@ -345,8 +345,8 @@
       },
       {
         "src": "assets/projects/04-09.webp",
-        "width": 1920,
-        "height": 1080,
+        "width": 5120,
+        "height": 2880,
         "source": "OGRÓD TEKLINÓW  (9).jpg",
         "is_top": false
       }
@@ -362,8 +362,8 @@
     "images": [
       {
         "src": "assets/projects/05-01.webp",
-        "width": 1920,
-        "height": 1080,
+        "width": 3840,
+        "height": 2160,
         "source": "OGRÓD SZYSZKI WŁOŚCIAŃSKIE - DUŻY WIEJSKI OGRÓD (1).jpg",
         "is_top": true
       },
@@ -446,8 +446,8 @@
       },
       {
         "src": "assets/projects/05-13.webp",
-        "width": 1920,
-        "height": 1080,
+        "width": 3840,
+        "height": 2160,
         "source": "OGRÓD SZYSZKI WŁOŚCIAŃSKIE - DUŻY WIEJSKI OGRÓD (13).jpg",
         "is_top": false
       }
@@ -463,8 +463,8 @@
     "images": [
       {
         "src": "assets/projects/06-01.webp",
-        "width": 1920,
-        "height": 1080,
+        "width": 3840,
+        "height": 2160,
         "source": "OGRÓD KĘBŁOWICE - PODMIEJSKI DUŻY (2).jpg",
         "is_top": true
       },
@@ -686,15 +686,15 @@
     "images": [
       {
         "src": "assets/projects/08-01.webp",
-        "width": 1920,
-        "height": 1080,
+        "width": 3840,
+        "height": 2160,
         "source": "OGRÓD JAWORZNO - Z RZEŹBĄ (1).jpg",
         "is_top": true
       },
       {
         "src": "assets/projects/08-02.webp",
-        "width": 1920,
-        "height": 1080,
+        "width": 3840,
+        "height": 2160,
         "source": "OGRÓD JAWORZNO - Z RZEŹBĄ (2).jpg",
         "is_top": false
       },
@@ -777,8 +777,8 @@
       },
       {
         "src": "assets/projects/08-14.webp",
-        "width": 1920,
-        "height": 1080,
+        "width": 3840,
+        "height": 2160,
         "source": "OGRÓD JAWORZNO - Z RZEŹBĄ (14).jpg",
         "is_top": false
       }
