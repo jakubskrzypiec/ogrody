@@ -6,7 +6,7 @@
  rail.append(track);track.append(group,duplicate);rail.classList.add('carousel-ready');
  const toggle=document.querySelector('.carousel-toggle');let paused=reduced.matches,position=0,distance=0,last=0,frame=0;
  const measure=()=>{distance=group.getBoundingClientRect().width;if(distance)position=((position%distance)+distance)%distance;paint()};
- function paint(){track.style.transform=`translate3d(${-position}px,0,0)`;toggle.setAttribute('aria-pressed',String(paused));toggle.textContent=paused?'Wznów ruch ▶':'Zatrzymaj ruch Ⅱ';}
+ function paint(){track.style.transform=`translate3d(${-position}px,0,0)`;toggle.setAttribute('aria-pressed',String(paused));toggle.textContent=paused?'Start ▶':'Stop Ⅱ';}
  function tick(now){const delta=last?Math.min(now-last,64):0;last=now;if(!paused&&!document.hidden&&distance){position=(position+delta*.025)%distance;paint()}frame=requestAnimationFrame(tick)}
  function step(dir){paused=true;position=(position+dir*(group.children[0].getBoundingClientRect().width+18)+distance)%distance;paint()}
  toggle.addEventListener('click',()=>{paused=!paused;paint()});document.querySelector('.carousel-prev').addEventListener('click',()=>step(-1));document.querySelector('.carousel-next').addEventListener('click',()=>step(1));
