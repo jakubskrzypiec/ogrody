@@ -101,7 +101,7 @@ if (hero && heroBg && finePointer && !reducedMotion) {
   });
 }
 
-// Galerie — na tym etapie po jednej wstępnej wizualizacji AI na realizację.
+// Client-supplied project visualizations.
 const galleries = window.projectGallery || {
   1: ['realizacja-wstepna-01.webp'],
   2: ['realizacja-wstepna-02.webp'],
@@ -140,7 +140,7 @@ function renderThumbs() {
     button.className = index === activeIndex ? 'active' : '';
     button.setAttribute('aria-label', `Pokaż zdjęcie ${index + 1}`);
     const img = document.createElement('img');
-    img.src = src;
+    img.src = src.includes("assets/projects/") ? src.replace(/\.webp$/, "-thumb.webp") : src;
     img.alt = '';
     img.loading = 'lazy';
     img.referrerPolicy = 'no-referrer';
@@ -159,10 +159,10 @@ function updateGallery(animate = false) {
   if (animate && !reducedMotion) galleryImage.classList.add('is-changing');
   const swap = () => {
     galleryImage.src = src;
-    galleryImage.alt = `Projekt ${String(activeGallery).padStart(2, '0')} — ujęcie ${activeIndex + 1}`;
+    galleryImage.alt = `${window.projectGalleryNames?.[activeGallery] || 'Projekt ogrodu'} — wizualizacja, ujęcie ${activeIndex + 1}`;
     galleryCurrent.textContent = String(activeIndex + 1).padStart(2, '0');
     galleryTotal.textContent = String(images.length).padStart(2, '0');
-    galleryCaption.textContent = `Projekt ${String(activeGallery).padStart(2, '0')} · wizualizacja poglądowa`;
+    galleryCaption.textContent = `${window.projectGalleryNames?.[activeGallery] || 'Projekt ogrodu'} · wizualizacja projektu · ${activeIndex + 1} / ${images.length}`;
     modal?.classList.toggle('single-image', images.length === 1);
     [...galleryThumbs.children].forEach((el, i) => el.classList.toggle('active', i === activeIndex));
     galleryThumbs.children[activeIndex]?.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', inline: 'center', block: 'nearest' });
