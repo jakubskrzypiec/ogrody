@@ -11,8 +11,8 @@
 .garden-photo:hover img{transform:scale(1.025)}
 .my-garden-detail .my-garden-layout{max-width:1500px;gap:50px}
 .my-garden-detail .my-garden-copy{max-width:900px}
-.my-garden-gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
-.my-garden-gallery .garden-photo{aspect-ratio:3/4;margin:0;border-radius:3px}
+.my-garden-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.my-garden-gallery .garden-photo{aspect-ratio:1;margin:0;border-radius:3px}
 .my-garden-gallery .garden-photo img{height:100%;object-fit:cover;object-position:center 65%}
 .my-garden-gallery [data-index="3"] img{object-position:42% center}
 .my-garden-gallery [data-index="0"] img{object-position:center 75%}
