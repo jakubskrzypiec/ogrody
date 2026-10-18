@@ -1,4 +1,11 @@
 /* Client content supplied in October: stories, documentation and real gardens. */
+.gallery-modal .gallery-nav,.gallery-modal .gallery-close{border:0;border-radius:0;background:transparent;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;padding:0;place-items:center;line-height:1;transform:none;transition:opacity .2s ease}
+.gallery-modal .gallery-nav{display:grid;width:56px;height:56px;justify-self:center}
+.gallery-modal .gallery-close{display:grid}
+.gallery-modal .gallery-nav:hover,.gallery-modal .gallery-close:hover{background:transparent;transform:none;opacity:1}
+.gallery-modal .gallery-nav svg,.gallery-modal .gallery-close svg{display:block;width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
+.gallery-modal .gallery-close svg{width:24px;height:24px}
+@media(max-width:780px){.gallery-modal .gallery-nav{display:none}}
 .site-header .brand{width:76px;height:76px;flex:0 0 76px;border-radius:50%;background:var(--green);box-shadow:0 2px 12px #15291a10}
 .site-header .brand img{width:60px;max-height:48px}
 .site-header .brand .brand-light{opacity:1!important}
