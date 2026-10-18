@@ -140,7 +140,7 @@ function renderThumbs() {
     button.className = index === activeIndex ? 'active' : '';
     button.setAttribute('aria-label', `Pokaż zdjęcie ${index + 1}`);
     const img = document.createElement('img');
-    img.src = /assets\/(projects|my-garden)\//.test(src) ? src.replace(/\.webp$/, "-thumb.webp") : src;
+    img.src = /assets\/(projects|my-garden|realizations|documentation)\//.test(src) ? src.replace(/\.webp$/, "-thumb.webp") : src;
     img.alt = '';
     img.loading = 'lazy';
     img.referrerPolicy = 'no-referrer';

@@ -1,11 +1,9 @@
 {
   "about": [
-    "Jestem projektantką ogrodów i tworzę Effkowe Ogrody. Możesz znać mnie również z Instagrama jako @effkowy.ogrod, gdzie dzielę się ogrodową codziennością, pokazuję rośliny i inspiruję do zmian we własnym otoczeniu.",
-    "Ogród jest częścią mojego życia także wtedy, gdy kończę pracę nad projektami. Mam swój własny, obserwuję jego zmiany i dobrze znam codzienność związaną z pielęgnacją zieleni. To doświadczenie towarzyszy mi podczas projektowania - myślę o tym, jak ogród będzie się rozwijał i jak będzie się w nim żyło za kilka lat.",
-    "Szczególnie bliskie są mi bujne rabaty, miękkie linie i rośliny, które zmieniają się wraz z porami roku. Lubię, gdy zieleń otula miejsca wypoczynku, a kolejne zakątki zachęcają, żeby zatrzymać się na chwilę. Ten naturalny charakter łączę z przemyślanym układem przestrzeni i rozwiązaniami ułatwiającymi korzystanie z ogrodu.",
-    "Projektując dla Ciebie, chcę poznać Twoją codzienność. Jak lubisz odpoczywać? Czego potrzebujesz wokół domu? Ile czasu chcesz poświęcać roślinom? Twoje odpowiedzi, charakter domu i warunki działki są punktem wyjścia do stworzenia indywidualnego projektu.",
-    "Pomagam połączyć pomysły i potrzeby w spójną całość - od podziału ogrodu na strefy, przez ścieżki i miejsca wypoczynku, po kompozycje roślinne. Zależy mi, żebyś rozumiał proponowane rozwiązania i potrafił wyobrazić sobie swój przyszły ogród.",
-    "Chcę tworzyć miejsca, w których poczujesz się u siebie i do których będziesz chętnie wychodzić każdego dnia."
+    "Jestem projektantką ogrodów i tworzę Effkowe Ogrody. Wychowałam się w rodzinie ogrodników, choć jako dziecko zarzekałam się, że nigdy nie będę miała własnego ogrodu. No cóż… życie napisało nieco inny scenariusz!",
+    "Dziś mój ogród we Wrocławiu jest nie tylko miejscem, w którym uwielbiam spędzać czas, ale też moją największą inspiracją i wizytówką tego, co robię.",
+    "Z wykształcenia jestem inżynierką środowiska oraz projektantką ogrodów a doświadczenie zdobywałam również przy projektowaniu architektury kubaturowej. Dzięki temu patrzę na ogród nie tylko przez pryzmat roślin, ale też funkcjonalności całej przestrzeni.",
+    "Kocham drzewa, bujne rabaty i naturalne kompozycje. Projektując, staram się tworzyć ogrody, które są nie tylko piękne, ale przede wszystkim wygodne do życia. Bo ogród ma służyć ludziom, a nie tylko dobrze wyglądać na zdjęciach."
   ],
   "faq": [
     [
@@ -128,6 +126,23 @@
           ]
         }
       ]
+    }
+  ],
+  "reviews": [
+    {
+      "name": "Klienci Effkowe Ogrody",
+      "quote": "Jesteśmy pod ogromnym wrażeniem Pani pracy, zaangażowania i dopasowania do potrzeb klienta. Cieszę się, że jednak zdecydowaliśmy się na wykonanie profesjonalnego projektu bo już widzę, że ułatwia to nie tylko zakup roślin ale również organizację i kolejność działań. Dla mnie osobiście to dodatkowy komfort i spokój ducha.",
+      "source": "Wiadomość po współpracy"
+    },
+    {
+      "name": "Anna",
+      "quote": "od lutego działam według planu i to daje mi taki święty spokój. Wiem co kupić, wiem gdzie posadzić i wiem że będzie genialnie :)",
+      "source": "Wiadomość po współpracy"
+    },
+    {
+      "name": "Klientka Effkowe Ogrody",
+      "quote": "Bardzo Pani dziękuję za wykonanie projektu i profesjonalizm. Już się nie mogę doczekać tej pięknej zieleni 😀 Wiem, że będzie cudownie. Powoli już mogę się rozglądać w internecie za roślinkami.",
+      "source": "Wiadomość po współpracy"
     }
   ]
 }
