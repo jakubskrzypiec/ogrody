@@ -1,4 +1,27 @@
 /* Client content supplied in October: stories, documentation and real gardens. */
+.garden-journal{width:var(--page);max-width:1500px;margin:auto;padding:70px 0}
+.garden-journal-intro{max-width:940px;margin-bottom:45px}
+.garden-journal-intro h2{font-size:clamp(45px,4.5vw,72px);line-height:1.13;margin-bottom:30px}
+.garden-journal-intro>p:not(.eyebrow),.garden-chapter-copy>p:not(.eyebrow){font-size:17px;line-height:1.9;color:var(--muted);margin-bottom:24px}
+.garden-journal-lead{margin-bottom:22px}
+.garden-journal-lead .garden-photo{aspect-ratio:2.2}
+.garden-journal-lead img{width:100%;height:100%;object-fit:cover;object-position:center}
+.garden-journal>.my-garden-gallery{margin-bottom:75px}
+.garden-journal>.my-garden-gallery .garden-photo{aspect-ratio:1}
+.garden-chapter{display:grid;grid-template-columns:1fr 1fr;gap:6vw;padding:65px 0;border-top:1px solid var(--line);align-items:start}
+.garden-chapter h2{font-size:clamp(40px,3.6vw,58px);line-height:1.15;margin-bottom:28px}
+.garden-chapter-photos{padding-top:8px}
+.garden-chapter-photos .my-garden-gallery{gap:15px}
+.garden-chapter-photos .garden-photo{aspect-ratio:1}
+.garden-more-photos{margin-top:22px}
+.garden-more-photos>summary{display:flex;justify-content:space-between;gap:14px;align-items:center;list-style:none;border-block:1px solid var(--line);padding:18px 0;cursor:pointer;font:500 10px/1.8 var(--sans);text-transform:uppercase;letter-spacing:.07em;color:var(--green)}
+.garden-more-photos>summary::-webkit-details-marker{display:none}
+.garden-more-photos>summary>span{font-size:21px;font-weight:300}
+.garden-more-photos[open]>summary>span{transform:rotate(45deg)}
+.garden-more-photos[open]>.my-garden-gallery{margin-top:18px}
+.garden-chapter:nth-of-type(2) .garden-photo img{object-position:center}
+@media(max-width:1100px){.garden-chapter{gap:35px}.garden-chapter-copy>p:not(.eyebrow){font-size:16px}.garden-chapter-photos .my-garden-gallery{gap:10px}}
+@media(max-width:780px){.garden-journal{width:calc(100% - 40px);padding:45px 0}.garden-journal-intro h2{font-size:45px}.garden-journal-intro>p:not(.eyebrow),.garden-chapter-copy>p:not(.eyebrow){font-size:16px}.garden-journal-lead .garden-photo{aspect-ratio:1.4}.garden-journal>.my-garden-gallery{margin-bottom:45px}.garden-journal>.my-garden-gallery .garden-photo{aspect-ratio:1}.garden-chapter{grid-template-columns:1fr;gap:22px;padding:40px 0}.garden-chapter h2{font-size:40px}.garden-chapter-photos{padding-top:0}}
 .gallery-modal .gallery-nav,.gallery-modal .gallery-close{border:0;border-radius:0;background:transparent;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;padding:0;place-items:center;line-height:1;transform:none;transition:opacity .2s ease}
 .gallery-modal .gallery-nav{display:grid;width:56px;height:56px;justify-self:center}
 .gallery-modal .gallery-close{display:grid}

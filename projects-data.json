@@ -82,7 +82,8 @@
       "Powierzchnia": "150 m²",
       "Styl": "nowoczesny z elementami orientalnymi",
       "Główne elementy": "balia wodna, altana, misa wodna, rabaty żwirowe"
-    }
+    },
+    "display_order": 10
   },
   {
     "number": 2,
@@ -203,7 +204,8 @@
       "Powierzchnia działki": "580 m²",
       "Styl": "naturalistyczny, lekko leśny z nowoczesnymi akcentami",
       "Główne elementy": "zagajnik brzozowo-sosnowy, palenisko, misa wodna, fontanna, rabaty bylinowe, strefa zabaw, warzywnik"
-    }
+    },
+    "display_order": 2
   },
   {
     "number": 3,
@@ -316,7 +318,8 @@
       "Powierzchnia": "1000 m²",
       "Styl": "nowoczesny z elementami naturalistycznymi",
       "Główne elementy": "altana drewniana z jacuzzi, zadaszony taras z jadalnią, palenisko, strefa sportowa, mini sad, zagajnik brzozowy"
-    }
+    },
+    "display_order": 3
   },
   {
     "number": 4,
@@ -402,7 +405,8 @@
       "Powierzchnia": "800 m²",
       "Styl": "angielski, klasyczny z naturalistycznymi nasadzeniami",
       "Główne elementy": "ceglane palenisko, warzywniki, drewniane ścieżki, taras modrzewiowy, rabaty bylinowe, strefa zabaw"
-    }
+    },
+    "display_order": 9
   },
   {
     "number": 5,
@@ -517,7 +521,8 @@
       "Powierzchnia ogrodu": "3100 m²",
       "Styl": "angielski, naturalistyczny z nutą wiejskiego romantyzmu",
       "Główne elementy": "pergola z jacuzzi, palenisko, fontanny, misy wodne, strefy wypoczynkowe, sad, warzywnik, rabaty kwiatowe"
-    }
+    },
+    "display_order": 4
   },
   {
     "number": 6,
@@ -660,7 +665,8 @@
       "Powierzchnia działki": "1100 m²",
       "Styl": "naturalistyczny, lekko leśny z nowoczesnymi akcentami",
       "Główne elementy": "palenisko, zagajnik brzozowo-sosnowy, basen, misy wodne, trejaż z kokonami, strefa zabaw, warzywniki, rabaty bylinowe"
-    }
+    },
+    "display_order": 5
   },
   {
     "number": 7,
@@ -768,7 +774,8 @@
       "Powierzchnia ogrodu": "200 m²",
       "Styl": "nowoczesny z elementami angielskiego ogrodu bylinowego, akcentami japońskimi i śródziemnomorskimi",
       "Główne elementy": "palmety grabowe, pergola z paleniskiem, cieniste rabaty, taras z donicami, zielnik, krzewy owocowe"
-    }
+    },
+    "display_order": 6
   },
   {
     "number": 8,
@@ -892,7 +899,8 @@
       "Powierzchnia działki": "830 m²",
       "Styl": "angielski, naturalistyczny z romantycznymi akcentami",
       "Główne elementy": "różanka, drewniane pergole, fontanny, ścieżki z ceglanymi obrzeżami, strefy wypoczynkowe, warzywnik, sad, miejsce na szklarnię"
-    }
+    },
+    "display_order": 7
   },
   {
     "number": 9,
@@ -1007,7 +1015,8 @@
       "Powierzchnia działki": "800 m²",
       "Styl": "naturalistyczny, śródziemnomorski z nutą wiejskiego romantyzmu",
       "Główne elementy": "drewniane pergole, basen, palenisko, misa wodna, taras śródziemnomorski, szklarnia, warzywnik, strefa zabaw"
-    }
+    },
+    "display_order": 8
   },
   {
     "number": 10,
@@ -1641,6 +1650,284 @@
       "Niektóre ogrody moi klienci tworzą samodzielnie, krok po kroku, inne powstają dzięki profesjonalnym firmom wykonawczym, m.in. współpracującej ze mną firmie AK Garden Adriana Kwaśniaka.",
       "W tej galerii dzielę się zdjęciami ogrodów zrealizowanych na podstawie moich projektów. Każdy jest inny, każdy ma swoją historię, ale wszystkie łączy jedno - z pomysłów zapisanych na papierze stały się prawdziwymi miejscami do życia, odpoczynku i cieszenia się zielenią."
     ],
-    "type": "photographs"
+    "type": "photographs",
+    "display_order": 11
+  },
+  {
+    "number": 11,
+    "name": "Ogród leśny z nutą romantyzmu",
+    "place": "Stanięcice",
+    "cover": "assets/projects/11-19.webp",
+    "images": [
+      {
+        "group": "project",
+        "number": 3,
+        "src": "assets/projects/11-03.webp",
+        "width": 3000,
+        "height": 1688,
+        "display_width": 1400,
+        "source": "1.jpg",
+        "id": "1YkGzjznZ2OgOz3fXG_iAOSQpxJieyRG9",
+        "is_top": true
+      },
+      {
+        "group": "project",
+        "number": 1,
+        "src": "assets/projects/11-01.webp",
+        "width": 1672,
+        "height": 941,
+        "display_width": 1400,
+        "source": "Fotorealistyczny ogród z lotu ptaka.png",
+        "id": "1Y6YvJt0i2-b_DtbDV9UZRj_LHCpsbjgZ",
+        "is_top": false
+      },
+      {
+        "group": "project",
+        "number": 2,
+        "src": "assets/projects/11-02.webp",
+        "width": 1672,
+        "height": 941,
+        "display_width": 1400,
+        "source": "Przytulny ogród z paleniskiem pod pergolą.png",
+        "id": "11wT2MrEoKEuufLDFRhHYNIouzm3tGtuP",
+        "is_top": false
+      },
+      {
+        "group": "project",
+        "number": 4,
+        "src": "assets/projects/11-04.webp",
+        "width": 1672,
+        "height": 941,
+        "display_width": 1400,
+        "source": "Spokojny ogród przy nowoczesnym domu.png",
+        "id": "1DmnoXe8dn060N2pj1E2NamCvmK2er25S",
+        "is_top": false
+      },
+      {
+        "group": "project",
+        "number": 5,
+        "src": "assets/projects/11-05.webp",
+        "width": 1672,
+        "height": 941,
+        "display_width": 1400,
+        "source": "Słoneczny ogród z pergolą i szklarnią.png",
+        "id": "1a-rPb1hgQXO-q4iGKSeRwgQFTeB1cr3i",
+        "is_top": false
+      },
+      {
+        "group": "project",
+        "number": 6,
+        "src": "assets/projects/11-06.webp",
+        "width": 1672,
+        "height": 941,
+        "display_width": 1400,
+        "source": "Słoneczny ogród z pergolą i spa.png",
+        "id": "1XJXF4c208RL4KBbUaY3DTmeoBn_qiuHE",
+        "is_top": false
+      },
+      {
+        "group": "project",
+        "number": 7,
+        "src": "assets/projects/11-07.webp",
+        "width": 1672,
+        "height": 941,
+        "display_width": 1400,
+        "source": "Słoneczny ogród z pergolą i ogniskiem.png",
+        "id": "1cHdZWdYPIlJp2GluAu8SsWXM-dy2i8Wo",
+        "is_top": false
+      },
+      {
+        "group": "project",
+        "number": 8,
+        "src": "assets/projects/11-08.webp",
+        "width": 1672,
+        "height": 941,
+        "display_width": 1400,
+        "source": "Słoneczny ogród z głęboką szklarnią.png",
+        "id": "1f98qEHqk88oGOiMxjTlArG1qZxffhWlE",
+        "is_top": false
+      },
+      {
+        "group": "project",
+        "number": 9,
+        "src": "assets/projects/11-09.webp",
+        "width": 1672,
+        "height": 941,
+        "display_width": 1400,
+        "source": "Słoneczny ogród przy nowoczesnym domu.png",
+        "id": "1S0tvBUSKjk5-Cm7wn9uDcOs0-5y4e23Q",
+        "is_top": false
+      },
+      {
+        "group": "project",
+        "number": 10,
+        "src": "assets/projects/11-10.webp",
+        "width": 1672,
+        "height": 941,
+        "display_width": 1400,
+        "source": "Sielski zakątek ogrodowy z pergolą.png",
+        "id": "1Md02FPjMig27tfDgidRqCEuE56gpXuEF",
+        "is_top": false
+      },
+      {
+        "group": "project",
+        "number": 11,
+        "src": "assets/projects/11-11.webp",
+        "width": 1672,
+        "height": 941,
+        "display_width": 1400,
+        "source": "Sielankowy ogród przy nowoczesnym domu.png",
+        "id": "1BJfijoXoC4KpTRcJiR227TtkRDeV6ahs",
+        "is_top": false
+      },
+      {
+        "group": "project",
+        "number": 12,
+        "src": "assets/projects/11-12.webp",
+        "width": 1672,
+        "height": 941,
+        "display_width": 1400,
+        "source": "Rustykalny domek wśród bujnego ogrodu.png",
+        "id": "18SE377a94G27VTHbpC2gWs9Rg8ukNdzN",
+        "is_top": false
+      },
+      {
+        "group": "project",
+        "number": 13,
+        "src": "assets/projects/11-13.webp",
+        "width": 1672,
+        "height": 941,
+        "display_width": 1400,
+        "source": "Rustykalny dom wśród kwitnącego ogrodu.png",
+        "id": "1vA_h7qWN9DSA14SOD6TYxgCHm37Bzy_C",
+        "is_top": false
+      },
+      {
+        "group": "project",
+        "number": 14,
+        "src": "assets/projects/11-14.webp",
+        "width": 1672,
+        "height": 941,
+        "display_width": 1400,
+        "source": "Rustykalny dom w leśnym ogrodzie.png",
+        "id": "1Ib9VKahxuPNLM8y28PgzN1-A7HH1K3d7",
+        "is_top": false
+      },
+      {
+        "group": "project",
+        "number": 15,
+        "src": "assets/projects/11-15.webp",
+        "width": 1671,
+        "height": 941,
+        "display_width": 1400,
+        "source": "Ogród z drewnianą pergolą w słońcu.png",
+        "id": "1IhaqzHmLmnpN-zryIdU1au1KsRwM_k4h",
+        "is_top": false
+      },
+      {
+        "group": "project",
+        "number": 16,
+        "src": "assets/projects/11-16.webp",
+        "width": 1672,
+        "height": 941,
+        "display_width": 1400,
+        "source": "Nowoczesny dom z ogrodzeniem i ogrodem.png",
+        "id": "19ckFmV71dIYquujxQAZnRtyxqTv33jI4",
+        "is_top": false
+      },
+      {
+        "group": "project",
+        "number": 17,
+        "src": "assets/projects/11-17.webp",
+        "width": 1672,
+        "height": 941,
+        "display_width": 1400,
+        "source": "Nowoczesny dom wśród kwitnącego ogrodu (1).png",
+        "id": "1tfq04KHb3J9WmR5MoXPBWf6sLnEFHpr3",
+        "is_top": false
+      },
+      {
+        "group": "project",
+        "number": 18,
+        "src": "assets/projects/11-18.webp",
+        "width": 1672,
+        "height": 941,
+        "display_width": 1400,
+        "source": "Nowoczesny dom wśród bujnego ogrodu2.png",
+        "id": "1UVEJbqHgT6fPLi9ctsHpKuSPsOsMBi4t",
+        "is_top": false
+      },
+      {
+        "group": "project",
+        "number": 19,
+        "src": "assets/projects/11-19.webp",
+        "width": 1672,
+        "height": 941,
+        "display_width": 1400,
+        "source": "Naturalistyczny ogród z pergolą i kamienną ścieżką.png",
+        "id": "179fB5_a6IT33rWsxx0pzikds7Yphb4nS",
+        "is_top": false
+      },
+      {
+        "group": "project",
+        "number": 20,
+        "src": "assets/projects/11-20.webp",
+        "width": 1672,
+        "height": 941,
+        "display_width": 1400,
+        "source": "Luksusowy ogród z pergolą i jacuzzi.png",
+        "id": "1VmQXktyim35yf5FPAnGOWZ5WsuoDVUVg",
+        "is_top": false
+      },
+      {
+        "group": "project",
+        "number": 21,
+        "src": "assets/projects/11-21.webp",
+        "width": 1672,
+        "height": 941,
+        "display_width": 1400,
+        "source": "Leśny ogród z drewnianym jacuzzi.png",
+        "id": "13Fv6WUie5yWI6MUQHTEb4cJzg9lg2QW_",
+        "is_top": false
+      },
+      {
+        "group": "project",
+        "number": 22,
+        "src": "assets/projects/11-22.webp",
+        "width": 1672,
+        "height": 941,
+        "display_width": 1400,
+        "source": "Fotorealistyczny ogród przy leśnym domku.png",
+        "id": "1G0Y2dGmFKSush2eyIP8lgJG_36XezlA0",
+        "is_top": false
+      },
+      {
+        "group": "project",
+        "number": 23,
+        "src": "assets/projects/11-23.webp",
+        "width": 1672,
+        "height": 941,
+        "display_width": 1400,
+        "source": "E2.png",
+        "id": "13FbSaHc5DJDjGM_-ztR8h023jQXZ2OZF",
+        "is_top": false
+      }
+    ],
+    "has_top": true,
+    "area": "1200 m²",
+    "description": [
+      "Ogród otulony zielenią, w którym leśny krajobraz przenika się z bujnymi, kwitnącymi rabatami. Zależało mi, aby zachować naturalny charakter tego miejsca, wykorzystać istniejące brzozy, sosny i wierzby, a jednocześnie stworzyć wygodną przestrzeń do codziennego życia i odpoczynku.",
+      "Miękkie, falujące linie rabat i ścieżek prowadzą do kolejnych zakątków ogrodu. Wśród drzew zaplanowałam kompozycje z hortensji, miskantów, rododendronów, azalii i bylin, które wprowadzają kolor oraz nadają nasadzeniom nieco angielskiego charakteru. Zieleń, biel, delikatne róże i fiolety pięknie współgrają z otaczającym lasem.",
+      "W ogrodzie znalazło się kilka miejsc do wypoczynku - żwirowy plac z paleniskiem, drewniany podest pod sosnami, zaciszna ławka wśród zieleni oraz taras z pergolą i jacuzzi. Nie zabrakło także klasycznej szklarni na ceglanej podmurówce, która razem z drewnianymi elementami małej architektury dodaje ogrodowi przytulności.",
+      "Istotną częścią projektu było również zachowanie otwartej przestrzeni trawnika, z której mogą swobodnie korzystać domowe psy, oraz zaplanowanie wygodnej komunikacji między wszystkimi częściami ogrodu.",
+      "To ogród, który nie próbuje konkurować z otaczającą przyrodą. Powoli wtapia się w leśny krajobraz, oferując jednocześnie wiele miejsc, w których można usiąść, odpocząć i po prostu nacieszyć się zielenią."
+    ],
+    "facts": {
+      "Lokalizacja": "Stanięcice",
+      "Powierzchnia działki": "1200 m²",
+      "Styl": "leśny, naturalistyczny z elementami romantycznego ogrodu bylinowego",
+      "Główne elementy": "zagajniki brzozowo-sosnowe, palenisko cortenowe, taras z jacuzzi, drewniane pergole, szklarnia, strefy wypoczynkowe, bujne rabaty bylinowe"
+    },
+    "display_order": 1
   }
 ]
