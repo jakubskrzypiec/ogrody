@@ -76,3 +76,12 @@
 .landing-v2 .about-short .portrait-placeholder::after{display:none}
 .landing-v2 .social-paper-bottom strong,.landing-v2 .social-paper-bottom>span{font-size:10px;color:#465845;line-height:1.6}
 .landing-v2 .carousel-caption .project-area{color:#56634e}
+/* Keep the home offer visible below the header on shorter laptop screens. */
+@media(min-width:1000px) and (max-height:850px){
+ .landing-v2 .philosophy-copy{padding:24px 28px}
+ .landing-v2 .philosophy-copy h2{font-size:clamp(40px,3.4vw,48px);margin-bottom:16px}
+ .landing-v2 .philosophy-copy p{font-size:15px;line-height:1.7;margin-bottom:11px}
+ .landing-v2 .philosophy-copy>.eyebrow{font-size:11px;margin-bottom:13px}
+ .landing-v2 .philosophy-copy .offer-highlight{font-size:22px;margin:12px 0;padding-block:9px}
+ .landing-v2 .service-buttons .hero-btn{min-height:50px}
+}
