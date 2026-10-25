@@ -1,0 +1,71 @@
+/* Client refinements — October 2026. */
+:root{--muted:#505b50}
+body{font-weight:400}
+.main-nav a{font-size:12px}
+.quiet-link{font-size:12px;letter-spacing:.08em;font-weight:500}
+.landing-v2 .hero-location{font-size:16px!important;line-height:1.7;color:#fffaf4;font-weight:500;letter-spacing:.03em}
+.landing-v2 .carousel-caption>span,.landing-v2 .carousel-caption .project-area{font-size:14px;line-height:1.65;color:#455648;letter-spacing:0;white-space:normal}
+.portfolio-tile-caption .project-card-character,.portfolio-tile-caption>span{font-size:14px;line-height:1.7;color:#455648}
+.contact-form label small,.consent span{font-size:13px!important;line-height:1.7}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:#687064;opacity:1}
+.contact-form label>span{font-size:12px;line-height:1.6}
+.upload-status{display:block;min-height:1.7em;color:var(--green)!important;margin-top:7px}
+.upload-status:empty{display:none}
+.contact-form input[type=file]{font-size:13px;min-height:44px}
+.review-quote figcaption{font-size:13px;color:#455648}
+.landing-v2 .social-paper-bottom strong,.landing-v2 .social-paper-bottom>span{font-size:11px;color:#435444;overflow-wrap:anywhere}
+.footer-column>span,.footer-brand p{color:#dce3d6;font-size:14px}
+.footer-bottom p,.footer-bottom a{font-size:12px;color:#dce3d6}
+.carousel-rail.carousel-ready{overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth}
+.carousel-group{width:max-content}
+.carousel-card{scroll-snap-align:start}
+.carousel-controls button:disabled{opacity:.35;cursor:default;transform:none}
+.carousel-brand{inset:auto;left:18px;bottom:18px;padding:10px 14px;border-radius:2px;background:#1d3025e0;color:#fffaf4;font:500 11px/1.5 var(--sans);letter-spacing:.06em;text-transform:uppercase;transition:opacity .25s ease}
+.carousel-card:hover .carousel-image>img,.carousel-card:focus-visible .carousel-image>img{filter:brightness(.93);transform:scale(1.015)}
+.page-hero,.detail-page .page-hero{min-height:220px;padding:32px 6vw;align-items:center}
+.page-hero .eyebrow,.page-hero-word{display:none}
+.page-hero-inner{width:100%;max-width:1500px}
+.page-hero h1,.detail-page .page-hero h1{font-size:clamp(44px,4.2vw,64px);line-height:1.15!important;max-width:1120px;margin:0}
+.offer-editorial-intro{padding-top:52px;padding-bottom:56px}
+.offer-editorial-intro h2{font-size:clamp(44px,4.4vw,68px);line-height:1.13;letter-spacing:-.02em;margin-bottom:28px}
+.offer-editorial-intro>.eyebrow{display:none}
+.offer-intro-paragraphs{gap:36px;margin-bottom:26px}
+.offer-intro-paragraphs p{font-size:16px;line-height:1.8}
+.offer-documentation-feature .offer-section-heading h2{font-size:clamp(44px,4.3vw,66px);line-height:1.15}
+.offer-samples summary{font-size:12px;letter-spacing:.05em}
+.offer-samples-grid{grid-template-columns:1fr;gap:12px}
+.offer-samples-grid .material-photo{aspect-ratio:auto}
+.offer-samples-grid .material-photo img{height:auto;object-fit:contain}
+.offer-samples-grid .material-photo.offer-visual{aspect-ratio:1.4}
+.offer-samples-grid .material-photo.offer-visual img{height:100%;object-fit:cover}
+.privacy-content{max-width:900px;margin:auto;padding-top:45px;padding-bottom:65px}
+.privacy-content h2{font-size:clamp(30px,3vw,40px);line-height:1.2;margin:40px 0 18px;letter-spacing:0}
+.privacy-content p,.privacy-content li{font-size:16px;line-height:1.85;color:var(--muted)}
+.privacy-content a{border-bottom:1px solid currentColor;overflow-wrap:anywhere}
+.privacy-content li{margin-bottom:10px}
+.privacy-draft-note{padding:18px 22px;background:#e8eade;border-left:2px solid var(--green);font-size:14px!important}
+@media(max-width:780px){
+ .site-header.menu-open,.site-header.scrolled.menu-open{background:var(--green-deep);color:#fffaf4;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;filter:none!important;transform:none!important;perspective:none;contain:none;box-shadow:none}
+ .site-header .main-nav{position:fixed;inset:0;z-index:101;width:100%;height:100vh;height:100dvh;max-height:100dvh;box-sizing:border-box;display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;padding:calc(var(--header-h) + 22px) 26px 28px;gap:12px;overflow-y:auto;overscroll-behavior:contain;background:var(--green-deep);color:#fffaf4;visibility:hidden;transform:translateX(100%);transition:transform .25s ease,visibility .25s}
+ .site-header.menu-open .main-nav{visibility:visible;transform:none}
+ .site-header .main-nav a:not(.nav-cta){display:flex;align-items:center;flex-shrink:0;min-height:44px;height:auto;padding:0;font:400 clamp(28px,5dvh,36px)/1.25 var(--serif);letter-spacing:0;color:#fffaf4;opacity:1}
+ .site-header .main-nav .nav-cta{font:500 12px/1.5 var(--sans)!important;letter-spacing:.04em;min-height:50px;max-width:330px;width:100%;flex-shrink:0;margin-top:12px;padding:12px 18px;color:#fffaf4}
+ .site-header.menu-open .menu-toggle{color:#fffaf4;position:relative;z-index:103}
+ .site-header.menu-open .brand{z-index:102}
+ .site-header .main-nav a::after{display:none!important}
+ .page-hero,.detail-page .page-hero{min-height:180px;padding:28px 20px}
+ .page-hero h1,.detail-page .page-hero h1{font-size:clamp(36px,9vw,46px);line-height:1.16!important}
+ .offer-editorial-intro{padding:38px 20px 44px}
+ .offer-editorial-intro h2{font-size:42px;margin-bottom:24px}
+ .offer-intro-paragraphs{grid-template-columns:1fr;gap:16px}
+ .landing-v2 .hero-location{font-size:15px!important}
+ .carousel-brand{opacity:1;left:12px;bottom:12px;font-size:10px;padding:8px 11px}
+ .offer-samples-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .privacy-content{padding-inline:20px}
+}
+@media(max-width:420px){.offer-samples-grid{grid-template-columns:1fr}.offer-editorial-intro h2{font-size:38px}}
+@media(prefers-reduced-motion:reduce){.carousel-rail.carousel-ready{scroll-behavior:auto}.site-header .main-nav{transition:none}}
+.inner-intro{padding-top:calc(var(--header-h) + 46px);padding-bottom:30px}.inner-intro h1{font-size:clamp(42px,4.2vw,64px);line-height:1.15;margin-bottom:20px}.inner-intro .eyebrow{display:none}
+
+.page-hero-image{object-position:center 68%}
+@media(max-width:780px){.menu-toggle span{transition:transform .25s ease}.menu-open .menu-toggle span:first-child{transform:translateY(4.5px) rotate(45deg)}.menu-open .menu-toggle span:last-child{transform:translateY(-4.5px) rotate(-45deg)}}

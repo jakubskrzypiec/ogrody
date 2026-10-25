@@ -17,18 +17,23 @@ function setHeaderState() {
 setHeaderState();
 window.addEventListener('scroll', setHeaderState, { passive: true });
 
-menuToggle?.addEventListener('click', () => {
-  const open = header.classList.toggle('menu-open');
-  menuToggle.setAttribute('aria-expanded', String(open));
-  menuToggle.setAttribute('aria-label', open ? 'Zamknij menu' : 'Otwórz menu');
-  body.classList.toggle('menu-active', open);
+function setMenuOpen(open) {
+  header.classList.toggle('menu-open',open);
+  menuToggle.setAttribute('aria-expanded',String(open));
+  menuToggle.setAttribute('aria-label',open?'Zamknij menu':'Otwórz menu');
+  body.classList.toggle('menu-active',open);
+  document.querySelectorAll('main,footer').forEach(el=>el.inert=open);
+  if(open)navLinks[0]?.focus({preventScroll:true});
+}
+menuToggle?.addEventListener('click',()=>setMenuOpen(!header.classList.contains('menu-open')));
+navLinks.forEach(link=>link.addEventListener('click',()=>setMenuOpen(false)));
+header?.addEventListener('keydown',event=>{
+  if(event.key!=='Tab'||!header.classList.contains('menu-open'))return;
+  const focusable=[menuToggle,...navLinks],first=focusable[0],last=focusable[focusable.length-1];
+  if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}
+  else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}
 });
-navLinks.forEach(link => link.addEventListener('click', () => {
-  header?.classList.remove('menu-open');
-  menuToggle?.setAttribute('aria-expanded', 'false');
-  menuToggle?.setAttribute('aria-label', 'Otwórz menu');
-  body.classList.remove('menu-active');
-}));
+matchMedia('(max-width:780px)').addEventListener('change',event=>{if(!event.matches&&header?.classList.contains('menu-open'))setMenuOpen(false);});
 
 // Pasek postępu — lekki i bez ingerencji w layout.
 const progressBar = document.querySelector('.scroll-progress span');
