@@ -83,11 +83,11 @@ body{font-weight:400}
 
 /* Side controls sit at the centre of the photographs, clear of captions. */
 .carousel-stage{position:relative}
-.carousel-stage .carousel-controls{position:absolute;z-index:3;inset:calc(var(--carousel-image-height,300px)/2) 28px auto;width:auto;max-width:none;height:64px;margin:0;transform:translateY(-50%);display:flex;justify-content:space-between;pointer-events:none}
-.carousel-stage .carousel-controls button{pointer-events:auto;display:grid;place-items:center;min-width:52px;width:52px;min-height:64px;height:64px;padding:0;border:1px solid #fffaf499;border-radius:2px;background:#fffaf4f5;color:#1d3025;box-shadow:0 4px 20px #10231925;transition:background .2s,color .2s,box-shadow .2s;transform:none}
-.carousel-stage .carousel-controls button svg{width:30px;height:24px;stroke-width:1.6}
-.carousel-stage .carousel-controls button:hover:not(:disabled){background:#294535;color:#fffaf4;box-shadow:0 4px 24px #10231940;transform:none}
+.carousel-stage .carousel-controls{position:absolute;z-index:3;inset:calc(var(--carousel-image-height,300px)/2) 28px auto;width:auto;max-width:none;height:58px;margin:0;transform:translateY(-50%);display:flex;justify-content:space-between;pointer-events:none}
+.carousel-stage .carousel-controls button{pointer-events:auto;display:grid;place-items:center;min-width:52px;width:52px;min-height:58px;height:58px;padding:0;border:1px solid #ffffffb3;border-radius:16px;background:#fffaf4f5;color:#294535;box-shadow:0 5px 18px #1023191c,inset 0 1px 0 #fff;transition:background .25s,color .25s,box-shadow .25s;transform:none}
+.carousel-stage .carousel-controls button svg{width:26px;height:22px;stroke-width:1.65}
+.carousel-stage .carousel-controls button:hover:not(:disabled){background:#294535;color:#fffaf4;box-shadow:0 6px 20px #10231930;transform:none}
 .carousel-stage .carousel-controls button:focus-visible{outline:3px solid #c96f7d;outline-offset:4px}
 .carousel-stage .carousel-controls button:disabled{opacity:.65;cursor:default;transform:none}
-@media(max-width:780px){.carousel-stage .carousel-controls{inset-inline:8px;height:52px}.carousel-stage .carousel-controls button{width:44px;min-width:44px;height:52px;min-height:52px}.carousel-stage .carousel-controls button svg{width:26px;height:22px}}
+@media(max-width:780px){.carousel-stage .carousel-controls{inset-inline:8px;height:50px}.carousel-stage .carousel-controls button{width:44px;min-width:44px;height:50px;min-height:50px;border-radius:14px}.carousel-stage .carousel-controls button svg{width:24px;height:20px}}
 @media(prefers-reduced-motion:reduce){.carousel-stage .carousel-controls button{transition:none}}
