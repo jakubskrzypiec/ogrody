@@ -61,13 +61,14 @@
   sending=true;syncButton();submit.setAttribute('aria-busy','true');status.textContent='Wysyłam zapytanie…';
   const data=new FormData(form);data.set('_replyto',data.get('email'));data.delete('attachment');photos.forEach((file,i)=>data.append('attachment'+(i+1),file));
   files.disabled=true;
+  const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),25000);
   try{
-   const response=await fetch(form.action.replace('formsubmit.co/','formsubmit.co/ajax/'),{method:'POST',body:data,headers:{Accept:'application/json'},signal:AbortSignal.timeout(25000)});
+   const response=await fetch(form.action.replace('formsubmit.co/','formsubmit.co/ajax/'),{method:'POST',body:data,headers:{Accept:'application/json'},signal:controller.signal});
    const result=await response.json();if(!response.ok||!(result.success===true||result.success==='true'))throw Error('Not accepted');
    status.textContent='Zapytanie zostało przyjęte do wysyłki. Dziękuję za wiadomość.';form.reset();photos=[];version++;uploadStatus.textContent='';files.setCustomValidity('');window.dispatchEvent(new CustomEvent('effkowe:conversion',{detail:{name:'inquiry_accepted'}}));
   }catch{
    status.replaceChildren(document.createTextNode('Nie udało się potwierdzić wysyłki. Dane zostały w formularzu. Spróbuj ponownie lub '));const mail=document.createElement('a');mail.href='mailto:ewa.katrycz@gmail.com';mail.textContent='napisz bezpośrednio e-mail';status.append(mail);
-  }finally{sending=false;files.disabled=false;syncButton();submit.removeAttribute('aria-busy');}
+  }finally{clearTimeout(timeout);sending=false;files.disabled=false;syncButton();submit.removeAttribute('aria-busy');}
  });
  document.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{const name=link.href.startsWith('mailto:')?'email_click':link.href.startsWith('tel:')?'phone_click':link.textContent.includes('Zapytaj o projekt ogrodu')?'project_cta_click':null;if(name)window.dispatchEvent(new CustomEvent('effkowe:conversion',{detail:{name}}));}));
 })();

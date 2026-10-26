@@ -91,3 +91,21 @@ body{font-weight:400}
 .carousel-stage .carousel-controls button:disabled{opacity:.65;cursor:default;transform:none}
 @media(max-width:780px){.carousel-stage .carousel-controls{inset-inline:8px;height:50px}.carousel-stage .carousel-controls button{width:44px;min-width:44px;height:50px;min-height:50px;border-radius:14px}.carousel-stage .carousel-controls button svg{width:24px;height:20px}}
 @media(prefers-reduced-motion:reduce){.carousel-stage .carousel-controls button{transition:none}}
+
+/* Vector arrows stay identical on mobile platforms and desktop. */
+.inline-arrow{display:inline-block;flex:0 0 auto;width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.55;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.12em;overflow:visible;pointer-events:none}
+.quiet-link .inline-arrow,.hero-btn .inline-arrow{margin-left:.35em}
+.garden-photo-zoom .inline-arrow,.material-photo>span .inline-arrow{width:18px;height:18px;vertical-align:middle}
+.extras-lines>a>span>.inline-arrow{width:25px;height:25px}
+/* Single, lightweight entrances; photographs and text retain their natural layout. */
+.motion-ready .reveal{filter:none;will-change:auto;transition:opacity .65s cubic-bezier(.2,.65,.25,1),transform .75s cubic-bezier(.2,.65,.25,1);transition-delay:calc(var(--reveal-order,0)*25ms)}
+.motion-ready .reveal:not(.visible){transform:translate3d(0,18px,0);filter:none}
+.motion-ready .reveal.visible{transform:none;filter:none}
+@media(max-width:780px){.motion-ready .reveal{transition-duration:.5s;transition-delay:0s}.motion-ready .reveal:not(.visible){transform:translate3d(0,12px,0)}
+.gallery-modal:not(.single-image) .gallery-nav{display:grid;position:absolute;top:50%;z-index:4;width:44px;height:48px;min-width:44px;transform:translateY(-50%);border-radius:14px;background:#1d3025db;color:#fffaf4;opacity:1}
+.gallery-modal .gallery-prev{left:8px}.gallery-modal .gallery-next{right:8px}.gallery-modal .gallery-nav svg{width:24px;height:24px}
+.contact-form input:not([type=checkbox]):not([type=file]),.contact-form select,.contact-form textarea{font-size:16px}
+}
+@media(prefers-reduced-motion:reduce){.motion-ready .reveal,.motion-ready .reveal:not(.visible){opacity:1;transform:none;filter:none;transition:none;animation:none}.motion-ready .reveal h2{animation:none!important}}
+
+.carousel-brand{flex-direction:row;gap:7px;white-space:nowrap}

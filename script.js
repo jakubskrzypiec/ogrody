@@ -52,6 +52,9 @@ window.addEventListener('scroll', () => {
 updateScrollProgress();
 
 // Reveal — kilka kierunków, ale bez przesuwania layoutu.
+document.querySelectorAll('.reviews-heading,.review-quote,.philosophy-copy,.philosophy-media,.my-garden-photos,.garden-magazine-copy,.garden-magazine-media,.garden-magazine-gallery-heading,.portfolio-index-head,.journal-heading,.press-feature>div,.press-feature>a,.page-invitation>div,.offer-inquiry>div,.project-story>div,.project-top-view,.project-gallery-heading').forEach(el=>{
+  if(!el.closest('.reveal'))el.classList.add('reveal');
+});
 const revealEls = [...document.querySelectorAll('.reveal')];
 revealEls.forEach((el, i) => el.style.setProperty('--reveal-order', i % 4));
 if (!reducedMotion) {
@@ -61,7 +64,7 @@ if (!reducedMotion) {
       entry.target.classList.add('visible');
       revealObserver.unobserve(entry.target);
     });
-  }, { threshold: 0.08, rootMargin: '0px 0px -7% 0px' });
+  }, { threshold: 0, rootMargin: '0px 0px -20px 0px' });
   revealEls.forEach(el => revealObserver.observe(el));
 } else {
   revealEls.forEach(el => el.classList.add('visible'));
@@ -127,6 +130,8 @@ let activeGallery = 1;
 let activeIndex = 0;
 let lastTrigger = null;
 let galleryTouchStart = 0;
+let galleryTouchStartY = 0;
+let gallerySwapTimer = 0;
 
 function preloadAround() {
   const images = galleries[activeGallery];
@@ -144,8 +149,14 @@ function renderThumbs() {
     button.type = 'button';
     button.className = index === activeIndex ? 'active' : '';
     button.setAttribute('aria-label', `Pokaż zdjęcie ${index + 1}`);
+    button.setAttribute('aria-pressed',String(index===activeIndex));
     const img = document.createElement('img');
-    img.src = /assets\/(projects|my-garden|realizations|documentation)\//.test(src) ? src.replace(/\.webp$/, "-thumb.webp") : src;
+    const thumbnail = new URL(src,location.href);
+    if(/assets\/(projects|my-garden|realizations|documentation)\//.test(thumbnail.pathname)){
+      thumbnail.pathname=/04-original\.jpg$/.test(thumbnail.pathname)?thumbnail.pathname.replace(/04-original\.jpg$/,'04-thumb.webp'):thumbnail.pathname.replace(/\.webp$/,'-thumb.webp');
+    }
+    img.src=thumbnail.href;
+    img.width=120;img.height=90;img.decoding='async';
     img.alt = '';
     img.loading = 'lazy';
     img.referrerPolicy = 'no-referrer';
@@ -159,6 +170,7 @@ function renderThumbs() {
 }
 
 function updateGallery(animate = false) {
+  clearTimeout(gallerySwapTimer);
   const images = galleries[activeGallery];
   const src = images[activeIndex];
   if (animate && !reducedMotion) galleryImage.classList.add('is-changing');
@@ -169,11 +181,11 @@ function updateGallery(animate = false) {
     galleryTotal.textContent = String(images.length).padStart(2, '0');
     galleryCaption.textContent = `${window.projectGalleryNames?.[activeGallery] || 'Projekt ogrodu'} · ${window.projectGalleryTypes?.[activeGallery] || 'wizualizacja projektu'} · ${activeIndex + 1} / ${images.length}`;
     modal?.classList.toggle('single-image', images.length === 1);
-    [...galleryThumbs.children].forEach((el, i) => el.classList.toggle('active', i === activeIndex));
+    [...galleryThumbs.children].forEach((el, i) => {el.classList.toggle('active',i===activeIndex);el.setAttribute('aria-pressed',String(i===activeIndex));});
     galleryThumbs.children[activeIndex]?.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', inline: 'center', block: 'nearest' });
     preloadAround();
   };
-  if (animate && !reducedMotion) setTimeout(swap, 110); else swap();
+  if (animate && !reducedMotion) gallerySwapTimer=setTimeout(swap, 110); else swap();
 }
 
 galleryImage?.addEventListener('load', () => galleryImage.classList.remove('is-changing'));
@@ -195,6 +207,8 @@ function openGallery(number, trigger) {
 }
 
 function closeGallery() {
+  clearTimeout(gallerySwapTimer);
+  galleryImage.classList.remove('is-changing');
   modal.classList.remove('open');
   modal.setAttribute('aria-hidden', 'true');
   body.classList.remove('gallery-open');
@@ -215,17 +229,18 @@ closeBtn?.addEventListener('click', closeGallery);
 prevBtn?.addEventListener('click', () => moveGallery(-1));
 nextBtn?.addEventListener('click', () => moveGallery(1));
 modal?.addEventListener('click', (event) => { if (event.target === modal) closeGallery(); });
-modal?.addEventListener('touchstart', event => { galleryTouchStart = event.changedTouches[0]?.clientX || 0; }, { passive: true });
-modal?.addEventListener('touchend', event => {
+modal?.querySelector('.gallery-stage')?.addEventListener('touchstart',event=>{galleryTouchStart=event.changedTouches[0]?.clientX||0;galleryTouchStartY=event.changedTouches[0]?.clientY||0;},{passive:true});
+modal?.querySelector('.gallery-stage')?.addEventListener('touchend', event => {
   const end = event.changedTouches[0]?.clientX || 0;
   const delta = end - galleryTouchStart;
-  if (Math.abs(delta) > 55) moveGallery(delta > 0 ? -1 : 1);
+  const vertical=(event.changedTouches[0]?.clientY||0)-galleryTouchStartY;
+  if (Math.abs(delta) > 55 && Math.abs(delta)>Math.abs(vertical)*1.3) moveGallery(delta > 0 ? -1 : 1);
 }, { passive: true });
 document.addEventListener('keydown', (event) => {
   if (!modal?.classList.contains('open')) return;
   if (event.key === 'Escape') closeGallery();
-  if (event.key === 'ArrowLeft') moveGallery(-1);
-  if (event.key === 'ArrowRight') moveGallery(1);
+  if(event.key==='ArrowLeft'){event.preventDefault();moveGallery(-1);}
+  if(event.key==='ArrowRight'){event.preventDefault();moveGallery(1);}
 });
 
 // Premium micro-interactions: karty realizacji mają subtelny tilt na desktopie.
