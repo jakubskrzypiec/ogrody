@@ -11,6 +11,6 @@
  previous.addEventListener('click',()=>step(-1));next.addEventListener('click',()=>step(1));
  rail.addEventListener('keydown',event=>{if(event.target===rail&&['ArrowLeft','ArrowRight'].includes(event.key)){event.preventDefault();step(event.key==='ArrowLeft'?-1:1);}});
  rail.addEventListener('scroll',update,{passive:true});
- new ResizeObserver(()=>{const{pitch,last}=geometry();rail.scrollTo({left:Math.min(firstVisible,last)*pitch,behavior:'instant'});update();}).observe(rail);
+ new ResizeObserver(()=>{rail.closest('.carousel-stage').style.setProperty('--carousel-image-height',group.querySelector('.carousel-image').getBoundingClientRect().height+'px');const{pitch,last}=geometry();rail.scrollTo({left:Math.min(firstVisible,last)*pitch,behavior:'instant'});update();}).observe(rail);
  update();
 })();
