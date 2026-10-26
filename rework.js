@@ -9,7 +9,7 @@
    if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}
   });
  }
- document.addEventListener('keydown',event=>{if(event.key==='Escape'&&document.body.classList.contains('menu-active')){document.querySelector('.menu-toggle').click();document.querySelector('.menu-toggle').focus();}});
+ document.addEventListener('keydown',event=>{if(event.key==='Escape'&&document.body.classList.contains('menu-active')){document.querySelector('.menu-toggle').click();document.querySelector('.menu-toggle').focus({preventScroll:true});}});
  const form=document.querySelector('.contact-form');if(!form)return;
  const files=form.querySelector('[type=file]'),status=form.querySelector('.form-status'),submit=form.querySelector('[type=submit]'),uploadStatus=form.querySelector('.upload-status');
  let photos=[],photoTask=Promise.resolve(),version=0,processing=false,sending=false;

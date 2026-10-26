@@ -17,11 +17,26 @@ function setHeaderState() {
 setHeaderState();
 window.addEventListener('scroll', setHeaderState, { passive: true });
 
+let lockedScrollY=null;
+function syncOverlayScrollLock(){
+  const open=body.classList.contains('menu-active')||body.classList.contains('gallery-open')||document.documentElement.classList.contains('garden-story-is-open');
+  if(open&&lockedScrollY===null&&matchMedia('(max-width:780px)').matches){
+    lockedScrollY=window.scrollY;
+    body.style.setProperty('--locked-scroll-top',`-${lockedScrollY}px`);
+    body.classList.add('page-scroll-locked');
+  }else if(!open&&lockedScrollY!==null){
+    const top=lockedScrollY;lockedScrollY=null;
+    body.classList.remove('page-scroll-locked');body.style.removeProperty('--locked-scroll-top');
+    window.scrollTo({top,behavior:'instant'});setHeaderState();
+  }
+}
+
 function setMenuOpen(open) {
   header.classList.toggle('menu-open',open);
   menuToggle.setAttribute('aria-expanded',String(open));
   menuToggle.setAttribute('aria-label',open?'Zamknij menu':'Otwórz menu');
   body.classList.toggle('menu-active',open);
+  syncOverlayScrollLock();
   document.querySelectorAll('main,footer').forEach(el=>el.inert=open);
   if(open)navLinks[0]?.focus({preventScroll:true});
 }
@@ -182,7 +197,8 @@ function updateGallery(animate = false) {
     galleryCaption.textContent = `${window.projectGalleryNames?.[activeGallery] || 'Projekt ogrodu'} · ${window.projectGalleryTypes?.[activeGallery] || 'wizualizacja projektu'} · ${activeIndex + 1} / ${images.length}`;
     modal?.classList.toggle('single-image', images.length === 1);
     [...galleryThumbs.children].forEach((el, i) => {el.classList.toggle('active',i===activeIndex);el.setAttribute('aria-pressed',String(i===activeIndex));});
-    galleryThumbs.children[activeIndex]?.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', inline: 'center', block: 'nearest' });
+    const activeThumb=galleryThumbs.children[activeIndex];
+    if(activeThumb)galleryThumbs.scrollTo({left:activeThumb.offsetLeft-galleryThumbs.offsetLeft-(galleryThumbs.clientWidth-activeThumb.offsetWidth)/2,behavior:reducedMotion?'instant':'smooth'});
     preloadAround();
   };
   if (animate && !reducedMotion) gallerySwapTimer=setTimeout(swap, 110); else swap();
@@ -198,11 +214,12 @@ function openGallery(number, trigger) {
   activeGallery = Number(number);
   activeIndex = Number(trigger?.dataset.index || 0);
   lastTrigger = trigger;
-  renderThumbs();
-  updateGallery(false);
   modal.classList.add('open');
   modal.setAttribute('aria-hidden', 'false');
   body.classList.add('gallery-open');
+  syncOverlayScrollLock();
+  renderThumbs();
+  updateGallery(false);
   closeBtn?.focus({ preventScroll: true });
 }
 
@@ -212,6 +229,7 @@ function closeGallery() {
   modal.classList.remove('open');
   modal.setAttribute('aria-hidden', 'true');
   body.classList.remove('gallery-open');
+  syncOverlayScrollLock();
   document.querySelectorAll('header, main, footer').forEach(el => { el.inert = false; });
   lastTrigger?.focus({ preventScroll: true });
 }

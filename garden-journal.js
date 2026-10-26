@@ -3,9 +3,10 @@ document.querySelectorAll('[data-garden-story]').forEach(button => {
   const dialog = document.getElementById(button.dataset.gardenStory);
   if (!dialog) return;
   button.addEventListener('click', () => {
+    document.documentElement.classList.add('garden-story-is-open');
+    window.syncOverlayScrollLock?.();
     dialog.showModal();
     dialog.scrollTop = 0;
-    document.documentElement.classList.add('garden-story-is-open');
   });
   dialog.querySelector('.garden-story-close').addEventListener('click', () => dialog.close());
   dialog.addEventListener('click', event => {
@@ -16,6 +17,7 @@ document.querySelectorAll('[data-garden-story]').forEach(button => {
   });
   dialog.addEventListener('close', () => {
     document.documentElement.classList.remove('garden-story-is-open');
+    window.syncOverlayScrollLock?.();
     button.focus({ preventScroll: true });
   });
 });
