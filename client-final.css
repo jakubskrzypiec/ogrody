@@ -124,3 +124,5 @@ body.page-scroll-locked{position:fixed;top:var(--locked-scroll-top);left:0;right
  .motion-ready .reveal,.motion-ready .reveal:not(.visible){transform:none;transition:opacity .35s ease;transition-delay:0s}
  .simple-head.reveal.visible h2,.about-intro-copy.reveal.visible h2,.faq-heading.reveal.visible h2,.contact-copy.reveal.visible h2{animation:none}
 }
+
+.article-byline{font:400 13px/1.7 var(--sans);color:#455648;margin:0 0 22px}.article-byline a{text-decoration:underline;text-underline-offset:3px}
